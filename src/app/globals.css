@@ -11,6 +11,14 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1700px;
+ 
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,3 +32,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Move Next.js dev badge from bottom-left to bottom-right */
+footer[aria-label="nextjs-footer"] {
+  left: auto !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
