@@ -79,7 +79,7 @@ const skillCards = [
 export default function Skills() {
   return (
     <div className="flex flex-col max-w-full h-[calc(100vh-200px)] w-full max-sm:h-auto">
-      <h1 className="w-full font-bold pl-6 pt-3 md:text-2xl max-sm:text-sm max-sm:text-center text-blue-300 max-sm:pl-0 md:pl-5 md:pt-5 sm:text-center">
+      <h1 className="w-full font-bold pl-6 pt-3 md:text-2xl max-sm:text-sm max-sm:text-center text-blue-300 max-sm:pl-0 md:pl-5 md:pt-5 sm:text-center xs:pt-0">
         SKILLS AND EXPERIENCE
       </h1>
 
@@ -91,14 +91,14 @@ export default function Skills() {
               className={` rounded-md shadow-lg transition-colors duration-300 hover:bg-transparent hover:border-2 ${card.bgColor} flex w-full max-w-[600px] md:h-70 xs:max-w-full`}
             >
               <div className="flex w-full">
-                <div className="w-1/2 p-4 max-sm:w-50">
+                <div className="w-1/2 p-4 max-sm:w-50 xs:w-40 md:w-70">
                   <Lottie animationData={card.animation} loop autoplay />
                 </div>
                 <div className="w-1/2 p-4 flex flex-col">
-                  <h1 className="font-bold text-lg max-md:text-md max-sm:text-md mb-2  ">
+                  <h1 className="font-bold text-lg max-md:text-md max-sm:text-md mb-2 xs:text-xs lg:text-lg ">
                     {card.title}
                   </h1>
-                  <div className="text-sm text-justify md:text-md max-sm:text-md">
+                  <div className="text-sm text-justify md:text-md max-sm:text-md xs:text-xs lg:text-sm">
                     {card.content}
                   </div>
 
