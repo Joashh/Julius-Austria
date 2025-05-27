@@ -17,7 +17,7 @@ export default function Skills() {
         <div className="flex-col  max-w-full w-full ">
           <div className="flex gap-6 p-6 pb-2 pt-3 2xl:p-3 max-sm:flex-col max-sm:pl-0 max-sm:pr-0  max-sm:w-full md:justify-center ">
 
-            <div className="bg-teal-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full ">
+            <div className="bg-gray-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full ">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto  max-sm:pb-5 max-sm:pr-3 md:h-60 md:w-60">
                   <Lottie animationData={languagesAnimation} loop autoplay />
@@ -33,7 +33,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div className="bg-teal-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
+            <div className="bg-gray-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto  max-sm:pb-5 max-sm:pr-3 md:h-60 md:w-60">
                   <Lottie animationData={toolsAnimation} loop autoplay />
@@ -48,7 +48,7 @@ export default function Skills() {
                 </div>
               </div>
             </div>
-            <div className="bg-teal-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
+            <div className="bg-gray-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto  max-sm:pb-5 max-sm:pr-3 md:h-60 md:w-60">
                   <Lottie animationData={aiAnimation} loop autoplay />
@@ -67,7 +67,7 @@ export default function Skills() {
 
           <div className="flex gap-6 p-6 pb-2 pt-3 2xl:p-3 max-sm:flex-col max-sm:pl-0 max-sm:pr-0  max-sm:w-full md:justify-center">
 
-            <div className="bg-yellow-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
+            <div className="bg-cyan-900 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto  max-sm:pb-5 max-sm:pr-3 md:h-60 md:w-60 ">
                   <Lottie animationData={participationAnimation} loop autoplay />
@@ -83,7 +83,7 @@ export default function Skills() {
               </div>
             </div>
 
-            <div className="bg-yellow-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
+            <div className="bg-cyan-900 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto   max-sm:pb-0 max-sm:px-2 md:h-60 md:w-60">
                   <Lottie animationData={awards2Animation} loop autoplay />
@@ -101,7 +101,7 @@ export default function Skills() {
               </div>
             </div>
 
-           <div className="bg-yellow-700 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
+           <div className="bg-cyan-900 min-w-80 rounded-md  transition-colors duration-300 hover:bg-transparent hover:border-2 max-w-120 max-h-80 shadow-lg  2xl:min-h-80 max-sm:w-full max-sm:min-w-full max-sm:max-w-full">
               <div className="flex max-sm:w-full ">
                 <div className="w-1/2 pl-4 max-h-50 pt-4 2xl:p-4 max-sm:w-40 max-sm:h-auto   max-sm:pb-0 max-sm:px-2 md:h-60 md:w-60">
                   <Lottie animationData={awardAnimation} loop autoplay />

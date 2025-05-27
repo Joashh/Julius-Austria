@@ -22,7 +22,7 @@ export default function Showcase() {
                         <div className="mt-1 font-bold text-white text-xl pl-4 max-sm:w-full max-sm:px-0">
                             <a href="#" className="hover:underline ">Internship</a>
                         </div>
-                        <div className="mt-2 text-s text-gray-300 text-justify p-4 max-sm:w-full max-sm:text-sm max-sm:px-0">
+                        <div className="mt-2 text-s text-gray-300 text-justify p-4 max-sm:w-full max-sm:text-sm max-sm:px-0 ">
                             During my internship, I had the opportunity to apply the knowledge and skills I gained in the classroom to real-world scenarios. I was immersed in a dynamic work environment where I collaborated with professionals, tackled meaningful projects, and gained hands-on experience in my field.
 
                             This experience not only sharpened my technical abilities but also helped me develop soft skills such as communication, time management, and problem-solving. I learned how to work as part of a team, adapt to new challenges, and take initiative in contributing to tasks that made an impact.

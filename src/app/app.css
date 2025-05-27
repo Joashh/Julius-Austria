@@ -2,19 +2,13 @@
 @source "../views";
 @layer theme, base, components, utilities;
 
-@media (prefers-color-scheme: dark) {
-    /* You can add default dark mode styles here */
-    body {
-      background-color: #18191d; /* Dark background */
-      color: #e2e8f0; /* Light text */
-    }
-  }
+
   
-  /* You can also use the 'dark' class to manually toggle dark mode */
-  body.dark {
-    background-color: #1a202c;
-    color: #e2e8f0;
-  }
+/* You can also use the 'dark' class to manually toggle dark mode */
+body {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
 
   /* Custom Scrollbar */
 @layer components {
@@ -55,6 +49,7 @@
 }
 
 @theme {
+  --breakpoint-xs: 380px;
   --breakpoint-sm: 1024px;
   --breakpoint-md: 1280px;
   
