@@ -2,7 +2,7 @@ import { FaLinkedin, FaInstagram, FaGithubSquare, FaInbox } from 'react-icons/fa
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-3  text-center md:hidden">
+    <footer className="bg-gray-800 text-gray-300 py-3  text-center max-sm:block md:hidden">
       <div className="max-w-xl mx-auto ">
         <h2 className="text-md font-semibold text-blue-300 ">CONNECT WITH ME</h2>
         

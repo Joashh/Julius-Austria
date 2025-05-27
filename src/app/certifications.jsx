@@ -25,12 +25,12 @@ export default function Certifications() {
         <div className="w-full bg-gray-800 rounded-md max-h-full max-sm:bg-transparent  ">
 
             <div className="bg-gray-800 p-4 space-y-2 h-full max-sm:bg-transparent max-sm:w-full max-sm:p-0 ">
-                <div className='flex gap-2 2xl:h-full 2xl:px-4 max-sm:flex-col max-sm:w-full '>
-                    <div className="w-225 2xl:w-1/2   max-sm:w-full max-sm:h-auto  ">
+                <div className='flex gap-2 2xl:h-full 2xl:px-4 max-sm:flex-col sm:flex-col md:flex-col lg:flex-row max-sm:w-full '>
+                    <div className="w-225 2xl:w-1/2 sm:w-full  max-sm:w-full max-sm:h-auto  ">
 
-                        <h1 className="font-bold text-blue-300 text-2xl pb-3 pl-1  2xl:pb-5 max-sm:text-sm max-sm:text-center">ACKNOWLEDGEMENTS & CERTIFICATIONS</h1>
+                        <h1 className="font-bold text-blue-300 text-2xl pb-3 pl-1  2xl:pb-5 max-sm:text-sm max-sm:text-center sm:text-center md:text-left ">ACKNOWLEDGEMENTS & CERTIFICATIONS</h1>
 
-                        <div className="relative 2xl:h-6/7 max-sm:w-full max-sm:h-auto ">
+                        <div className="relative 2xl:h-6/7 max-sm:w-full sm:w-full  max-sm:h-auto ">
                             <Swiper
                                 modules={[Navigation]}
                                 navigation={{
@@ -87,7 +87,7 @@ export default function Certifications() {
                             {/* Card 1 */}
                             <div className="flex items-start space-x-4 max-sm:w-full  ">
                                 <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer md:w-70 md:h-auto"
+                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
                                     src="images/japan.jpg"
                                     alt="Best Presenter"
                                     onClick={() => handleImageClick("images/japan.jpg")}
@@ -103,7 +103,7 @@ export default function Certifications() {
                             {/* Card 2 */}
                             <div className="flex items-start space-x-4 ">
                                 <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer md:w-70 md:h-auto"
+                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto  md:h-auto"
                                     src="images/cert7.png"
                                     alt="Copyrighted App"
                                     onClick={() => handleImageClick("images/cert7.png")}
@@ -119,7 +119,7 @@ export default function Certifications() {
                             {/* Card 3 (duplicate of Card 1) */}
                             <div className="flex items-start space-x-4 ">
                                 <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer md:w-70 md:h-auto"
+                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
                                     src="images/japan.jpg"
                                     alt="Best Presenter"
                                     onClick={() => handleImageClick("images/japan.jpg")}
