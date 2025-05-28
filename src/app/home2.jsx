@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from "react";
 import Footer from '@/components/footer.jsx';
+import Lottie from "lottie-react";
+import bgstart from '../assets/bg.json';
 
 
 export default function Home2() {
@@ -12,7 +14,13 @@ export default function Home2() {
     return (
         <> 
         {!isExpanded ? (
-            <div className="fixed z-50 flex items-center justify-center bg-gray-950 rounded-lg p-10 shadow-lg w-screen h-screen max-sm:flex-col">
+             <div className="relative w-screen h-screen overflow-hidden ">
+      {/* Background Lottie */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 hidden max-xs:block">
+            <Lottie animationData={bgstart} loop autoplay className="w-full h-full"  />
+        </div>
+
+            <div className="absolute z-50 flex items-center justify-center  rounded-lg p-10 shadow-lg w-screen h-screen max-sm:flex-col">
                 <img
                     className="h-60 w-60 rounded-full  shadow-[0_0_10px_#00f0ff] hover:shadow-[0_0_20px_#00f0ff] transition-shadow duration-300 max-sm:w-30 max-sm:h-auto"
                     src="/images/testprof.jpeg"
@@ -38,12 +46,14 @@ export default function Home2() {
         onClick={() => setIsExpanded(!isExpanded)}>
             View Portfolio
         </button>
+        <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
         <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
             Download Resume
         </button>
+        </a>
     </div>
 </div>
-
+</div>
             </div>
         ) : (
 

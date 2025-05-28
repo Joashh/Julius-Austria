@@ -5,7 +5,7 @@ export default function Showcase() {
         <div className="bg-gray-800  p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto max-sm:bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0">
             {/* Item 1 */}
             <div id="ITEM 1" className='max-sm:w-full '>
-                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full md:flex-col lg:flex-row ">
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
                     {/* Image on the right */}
                     <div>
                         <img
@@ -40,7 +40,7 @@ export default function Showcase() {
 
             {/* Item 2 */}
             <div id="ITEM 2" className='max-sm:w-full'>
-                <div className="flex items-center gap-4 pb-4 max-sm:flex-col md:flex-col lg:flex-row max-sm:w-full max-sm:h-auto  ">
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
@@ -74,7 +74,8 @@ export default function Showcase() {
 
             {/* Item 2 */}
             <div id="ITEM 2" className='max-sm:w-full '>
-                <div className="flex items-center gap-4 pb-4 max-sm:flex-col md:flex-col lg:flex-row max-sm:w-full max-sm:h-auto  ">
+               
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "

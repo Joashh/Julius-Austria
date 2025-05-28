@@ -84,21 +84,21 @@ export default function Skills() {
       </h1>
 
       <div className="flex justify-center w-full px-6 max-sm:px-2 ">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4 justify-center ">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4 justify-center  ">
           {skillCards.map((card, index) => (
             <div
               key={index}
               className={` rounded-md shadow-lg transition-colors duration-300 hover:bg-transparent hover:border-2 ${card.bgColor} flex w-full max-w-[600px] md:h-70 xs:max-w-full`}
             >
               <div className="flex w-full">
-                <div className="w-1/2 p-4 max-sm:w-50 xs:w-40 md:w-70">
+                <div className="w-1/2 p-4 max-sm:w-50 xs:w-40 md:w-70 max-xs:w-40 ">
                   <Lottie animationData={card.animation} loop autoplay />
                 </div>
                 <div className="w-1/2 p-4 flex flex-col">
-                  <h1 className="font-bold text-lg max-md:text-md max-sm:text-md mb-2 xs:text-xs lg:text-lg ">
+                  <h1 className="font-bold text-lg max-md:text-md max-sm:text-md mb-2 xs:text-xs lg:text-lg max-xs:text-xs">
                     {card.title}
                   </h1>
-                  <div className="text-sm text-justify md:text-md max-sm:text-md xs:text-xs lg:text-sm">
+                  <div className="text-sm text-justify md:text-md max-sm:text-md xs:text-xs lg:text-sm max-xs:text-xs">
                     {card.content}
                   </div>
 

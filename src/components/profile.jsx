@@ -41,19 +41,21 @@ export default function Profile() {
           </div>
         ) : (
           <>
-           <div className="fixed z-50 flex items-center justify-center bg-gray-950 rounded-lg p-10 shadow-lg ">
+           <div className="fixed z-50 flex flex-col items-center justify-center bg-gray-950 rounded-lg p-10 shadow-lg max-sm:w-full md:flex-row">
+           
             <img
-              className="h-60 w-60 rounded-full shadow-lg"
+              className="w-60 h-60  rounded-full shadow-lg max-md:w-30 max-md:h-30"
               src="../images/testprof.jpeg"
               alt=""
             />
-            <div className="flex flex-col pl-7">
-               <h1 className="text-white text-3xl font-bold ">I'm Julius</h1>
-               <p className="text-2xl font-light min-w-100 ">Software and AI Developer</p>
+           
+            <div className=" flex flex-col justify-center md:justify-left md:pl-7">
+               <h1 className="text-white text-xl font-bold md:text-3xl pt-4 md:pt-0 text-center md:text-left">I'm Julius</h1>
+               <p className="text-lg font-light min-w-100 max-sm:text-md md:text-2xl text-center md:text-left">Software and AI Developer</p>
             <TypeAnimation
-                    className="pt-3 min-h-20  text-justify text-sm font-light min-w-100 max-w-30 "
+                    className="pt-3 min-h-20  md:text-justify text-sm font-light min-w-100 max-w-30 max-md:text-xs text-center px-10 md:px-0"
                     sequence={[
-                        "You can call me 'Julius' and Welcome to my portfolio — a space where I showcase the projects, skills, and experiences that reflect my journey in tech. Feel free to explore and connect with me. Let’s build something amazing together! 🚀",
+                        "Welcome to my portfolio — a space where I showcase the projects, skills, and experiences that reflect my journey in tech. Feel free to explore and connect with me. Let’s build something amazing together! 🚀",
                         1000, // optional pause at end
                     ]}
                     speed={70}
@@ -63,9 +65,11 @@ export default function Profile() {
                 />
             
 
-            <div className=" pt-5 gap-3 flex">
-            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800" onClick={() => setIsExpanded(!isExpanded)}>View Portfolio</button>
-            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800">Download Resume</button>
+            <div className=" pt-5 gap-3 flex max-sm:justify-center ">
+            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs" onClick={() => setIsExpanded(!isExpanded)}>View Portfolio</button>
+            <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
+            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs">Download Resume</button>
+            </a>
             </div>
             </div>
             </div>
