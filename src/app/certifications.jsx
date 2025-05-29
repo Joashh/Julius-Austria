@@ -52,7 +52,7 @@ export default function Certifications() {
                                     slidesPerView={1}
                                     className="default-carousel"
                                 >
-                                    {[1, 2, 3, 4, 5, 6].map((num) => (
+                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
                                         <SwiperSlide key={num}>
                                             <div className="bg-gray-900 rounded-2xl h-[calc(90vh-200px)] w-full flex justify-center items-center max-sm:h-50">
                                                 <img
