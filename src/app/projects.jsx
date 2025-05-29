@@ -42,6 +42,12 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description: "This project simulates urban traffic flow in the GAMA Platform using Agent-Based Modeling, with agents like vehicles, roads, and traffic lights to study changing traffic patterns.",
       githubLink: "https://github.com/Joashh/Traffic-Simulation",
     },
+    {
+      image: "images/chatbot.png",
+      title: "NLP-Chatbot: EnrollEase LSPU",
+      description: "A simple chatbot built with Streamlit and Natural Language Processing (NLP) to automate and streamline student inquiries for LSPU Enrollment.",
+      githubLink: "https://github.com/Joashh/NLP-Chatbot/tree/main",
+    },
   ];
 
   // Track previous project index to get direction (for slide animation)

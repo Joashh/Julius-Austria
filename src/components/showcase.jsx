@@ -10,7 +10,7 @@ export default function Showcase() {
                     <div>
                         <img
                             className="rounded-lg min-w-100 w-100 h-100 object-cover max-sm:min-w-0 max-sm:w-full max-sm:h-auto "
-                            src="/images/wallpaper.png"
+                            src="/images/cpaf3.jpg"
                             alt="intern"
                         />
                     </div>
@@ -44,7 +44,7 @@ export default function Showcase() {
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
-                        src="/images/japan.jpg"
+                        src="/images/lspu.png"
                         alt="school"
                     />
 
@@ -79,7 +79,7 @@ export default function Showcase() {
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
-                        src="/images/shs.png"
+                        src="/images/shs2.png"
                         alt="school"
                     />
 
@@ -91,7 +91,7 @@ export default function Showcase() {
                         <div className="mt-1 font-bold text-white text-xl pl-4 max-sm:px-0">
                             <a href="#" className="hover:underline">STEM Track</a>
                         </div>
-                        <div className="mt-2 text-s text-gray-300 text-justify p-4 max-sm:px-0">
+                        <div className="mt-2 text-s text-gray-300 text-justify p-4 max-sm:text-sm max-sm:w-full max-sm:px-0">
                             Pursuing the STEM (Science, Technology, Engineering, and Mathematics) strand in Senior High School provided a strong academic foundation that prepared me for the challenges of a Computer Science degree. The STEM curriculum sharpened my analytical thinking, mathematical reasoning, and scientific inquiry, which are essential in understanding computing systems and intelligent technologies. Through subjects like General Mathematics, Physics, and Computer Programming, I cultivated a disciplined approach to problem-solving and a curiosity for how technology shapes the world. My experiences in STEM helped me build the mindset and skills necessary for innovation and success in the tech field.
 
                         </div>

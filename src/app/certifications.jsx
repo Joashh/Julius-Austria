@@ -88,14 +88,15 @@ export default function Certifications() {
                             <div className="flex items-start space-x-4 max-sm:w-full  ">
                                 <img
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
-                                    src="images/japan.jpg"
+                                    src="images/placeholder.png"
                                     alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/japan.jpg")}
+                                    onClick={() => handleImageClick("images/placeholder.png")}
                                 />
                                 <div>
-                                    <h1 className="font-bold max-sm:text-sm">Best Presenter in Research Congress 2025</h1>
+                                    <h1 className="font-bold max-sm:text-sm"> 🏅 Best Presenter in Research Congress 2025</h1>
                                     <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
-                                        Julius received the Best Presenter award among the Computer Science students who participated during college days.
+                                        [Certificate Not Yet Released]
+                                        I have received the Best Presenter award among the Computer Science students who participated during my 4th year college.
                                     </p>
                                 </div>
                             </div>
@@ -109,7 +110,7 @@ export default function Certifications() {
                                     onClick={() => handleImageClick("images/cert7.png")}
                                 />
                                 <div>
-                                    <h1 className="font-bold max-sm:text-sm  max-sm:w-full">First Copyrighted Mobile Application 2024</h1>
+                                    <h1 className="font-bold max-sm:text-sm  max-sm:w-full">🏅 First Copyrighted Mobile Application 2024</h1>
                                     <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs ">
                                         In their third year of college, User's group developed a mobile app for kids that measures their abilities and skills. The app was patented or copyrighted.
                                     </p>
@@ -119,14 +120,15 @@ export default function Certifications() {
                             {/* Card 3 (duplicate of Card 1) */}
                             <div className="flex items-start space-x-4 ">
                                 <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
-                                    src="images/japan.jpg"
+                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto "
+                                    src="images/placeholder.png"
                                     alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/japan.jpg")}
+                                    onClick={() => handleImageClick("images/placeholder.png")}
                                 />
                                 <div>
-                                    <h1 className="font-bold max-sm:text-sm">Best Presenter in Research Congress</h1>
+                                    <h1 className="font-bold max-sm:text-sm">🏅 Latin Honor College Degree</h1>
                                     <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
+                                        [No Graduation Details Yet]
                                         Julius received the Best Presenter award among the Computer Science students who participated during college days.
                                     </p>
                                 </div>
