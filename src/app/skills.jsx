@@ -79,7 +79,7 @@ const skillCards = [
 export default function Skills() {
   return (
     <div className="flex flex-col max-w-full h-[calc(100vh-200px)] w-full max-sm:h-auto">
-      <h1 className="w-full font-bold pl-6 pt-3 md:text-2xl max-sm:text-sm max-sm:text-center text-blue-300 max-sm:pl-0 md:pl-5 md:pt-5 sm:text-center xs:pt-0">
+      <h1 className="w-full font-bold pl-6 pt-3 md:text-2xl max-sm:text-sm max-sm:text-center sm:pt-5 text-blue-300 max-sm:pl-0 md:pl-5 md:pt-5 sm:text-center xs:pt-0">
         SKILLS AND EXPERIENCE
       </h1>
 

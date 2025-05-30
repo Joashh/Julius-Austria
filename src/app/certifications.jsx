@@ -25,12 +25,12 @@ export default function Certifications() {
         <div className="w-full bg-gray-800 rounded-md max-h-full max-sm:bg-transparent  ">
 
             <div className="bg-gray-800 p-4 space-y-2 h-full max-sm:bg-transparent max-sm:w-full max-sm:p-0 ">
-                <div className='flex gap-2 2xl:h-full 2xl:px-4 max-sm:flex-col  max-md:flex-col  max-sm:w-full '>
+                <div className='flex gap-2 2xl:h-full 2xl:px-4 max-sm:flex-col sm:flex-col md:flex-col lg:flex-row max-sm:w-full '>
                     <div className="w-225 2xl:w-1/2 sm:w-full  max-sm:w-full max-sm:h-auto  ">
 
                         <h1 className="font-bold text-blue-300 text-2xl pb-3 pl-1  2xl:pb-5 max-sm:text-sm max-sm:text-center sm:text-center md:text-left ">ACKNOWLEDGEMENTS & CERTIFICATIONS</h1>
 
-                        <div className="relative 2xl:h-6/7 max-sm:w-full sm:w-full  max-sm:h-auto ">
+                        <div className="relative 2xl:h-6/7 max-sm:w-full sm:w-full  max-sm:h-auto  ">
                             <Swiper
                                 modules={[Navigation]}
                                 navigation={{

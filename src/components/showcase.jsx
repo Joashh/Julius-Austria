@@ -2,10 +2,11 @@ import { ShareIcon, EllipsisHorizontalCircleIcon, EllipsisHorizontalIcon, Ellips
 export default function Showcase() {
     return (
 
-        <div className="bg-gray-800  p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto max-sm:bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0">
+        <div className="bg-gray-800  p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto max-sm:bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
             {/* Item 1 */}
+            <h1 className='text-sm  text-center text-blue-300 font-bold sm:hidden'> ACADEMIC BACKGROUND</h1>
             <div id="ITEM 1" className='max-sm:w-full '>
-                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col sm:flex-row ">
                     {/* Image on the right */}
                     <div>
                         <img
@@ -30,7 +31,7 @@ export default function Showcase() {
                             Overall, my internship was a transformative part of my academic journey, providing valuable insights into industry practices and solidifying my passion for the career path I’ve chosen.
                         </div>
                         <div className="pl-4 flex gap-4 max-sm:text-sm max-sm:px-0">
-                            <button className="btn-primary">Documentation</button>
+                            <button className="btn-primary" onClick={() => window.open( 'https://cpaf.uplb.edu.ph/cpaf-updates/cpaf-interns-wrap-up-internship-with-presentation-of-outputs/')}>Documentation</button>
                             <button> <EllipsisHorizontalIcon className="h-8 w-8 text-white cursor-pointer"> </EllipsisHorizontalIcon> </button>
                         </div>
 
@@ -40,7 +41,7 @@ export default function Showcase() {
 
             {/* Item 2 */}
             <div id="ITEM 2" className='max-sm:w-full'>
-                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col sm:flex-row">
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
@@ -75,7 +76,7 @@ export default function Showcase() {
             {/* Item 2 */}
             <div id="ITEM 2" className='max-sm:w-full '>
                
-                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col ">
+                <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col sm:flex-row">
                     {/* Image on the right */}
                     <img
                         className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "

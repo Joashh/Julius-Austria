@@ -14,24 +14,26 @@ export default function Home2() {
     return (
         <> 
         {!isExpanded ? (
-             <div className="relative w-screen h-screen overflow-hidden ">
+             <div className="relative w-screen h-screen overflow-hidden">
       {/* Background Lottie */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 hidden max-xs:block">
+        <div className="absolute top-0 left-0 w-full h-full z-0 hidden max-xs:block ">
             <Lottie animationData={bgstart} loop autoplay className="w-full h-full"  />
         </div>
-
-            <div className="absolute z-50 flex items-center justify-center  rounded-lg p-10 shadow-lg w-screen h-screen max-sm:flex-col">
+        
+            
+            <div className=" z-50 flex items-center justify-center  rounded-lg p-10 shadow-lg w-screen min-h-screen max-sm:flex-col ">
+                
                 <img
                     className="h-60 w-60 rounded-full  shadow-[0_0_10px_#00f0ff] hover:shadow-[0_0_20px_#00f0ff] transition-shadow duration-300 max-sm:w-30 max-sm:h-auto"
                     src="/images/testprof.jpeg"
                     alt=""
                 />
                 <div className="flex flex-col pl-7 max-sm:pl-0 max-sm:pt-5 max-sm:items-center max-sm:justify-center max-sm:w-full max-sm:text-center ">
-    <h1 className="text-white text-3xl font-bold max-sm:text-xl">I'm Julius</h1>
-    <p className="text-2xl font-light min-w-100 max-sm:text-lg">Software and AI Developer</p>
+    <h1 className="text-blue-300 md:text-3xl font-bold text-2xl">I'm Julius</h1>
+    <p className="text-2xl font-light min-w-100 max-sm:text-lg text-white">Software and AI Developer</p>
     
     <TypeAnimation
-        className="pt-3 min-h-20 text-justify text-sm font-light min-w-100 max-w-30  max-sm:px-6 max-sm:text-center max-sm:text-xs"
+        className="pt-3 min-h-20 text-justify text-sm font-light min-w-100 max-w-30  max-sm:px-10 max-sm:text-center max-sm:text-xs"
         sequence={[
             "Welcome to my portfolio — a space where I showcase the projects, skills, and experiences that reflect my journey in tech. Feel free to explore and connect with me. Let’s build something amazing together! ",
             1000,
