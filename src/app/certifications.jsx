@@ -25,8 +25,8 @@ export default function Certifications() {
         <div className="w-full bg-gray-800 rounded-md max-h-full max-sm:bg-transparent  ">
 
             <div className="bg-gray-800 p-4 space-y-2 h-full max-sm:bg-transparent max-sm:w-full max-sm:p-0 ">
-                <div className='flex gap-2 2xl:h-full 2xl:px-4 max-sm:flex-col sm:flex-col md:flex-col lg:flex-row max-sm:w-full '>
-                    <div className="w-225 2xl:w-1/2 sm:w-full  max-sm:w-full max-sm:h-auto  ">
+                <div className='flex gap-2 2xl:h-full 2xl:px-4  flex-col md:flex-row max-sm:w-full '>
+                    <div className="md:w-150 lg:w-225 2xl:w-1/2   w-full max-sm:h-auto   ">
 
                         <h1 className="font-bold text-blue-300 text-2xl pb-3 pl-1  2xl:pb-5 max-sm:text-sm max-sm:text-center sm:text-center md:text-left ">ACKNOWLEDGEMENTS & CERTIFICATIONS</h1>
 
@@ -90,11 +90,11 @@ export default function Certifications() {
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
                                     src="images/japan.jpg"
                                     alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/placeholder.png")}
+                                    onClick={() => handleImageClick("images/japan.jpg")}
                                 />
                                 <div>
                                     <h1 className="font-bold max-sm:text-sm"> 🏅 Best Presenter in Research Congress 2025</h1>
-                                    <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
+                                    <p className="font-light text-justify pt-1  text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
                                         [Certificate Not Yet Released]
                                         I have received the Best Presenter award among the Computer Science students who participated during my 4th year college.
                                     </p>
@@ -111,7 +111,7 @@ export default function Certifications() {
                                 />
                                 <div>
                                     <h1 className="font-bold max-sm:text-sm  max-sm:w-full">🏅 First Copyrighted Mobile Application 2024</h1>
-                                    <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs ">
+                                    <p className="font-light text-justify pt-1  text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs ">
                                         In their third year of college, User's group developed a mobile app for kids that measures their abilities and skills. The app was patented or copyrighted.
                                     </p>
                                 </div>
@@ -123,11 +123,11 @@ export default function Certifications() {
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto "
                                     src="images/japan.jpg"
                                     alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/placeholder.png")}
+                                    onClick={() => handleImageClick("images/japan.jpg")}
                                 />
                                 <div>
                                     <h1 className="font-bold max-sm:text-sm">🏅 Latin Honor College Degree</h1>
-                                    <p className="font-light text-justify pt-1 w-60 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
+                                    <p className="font-light text-justify pt-1 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
                                         [No Graduation Details Yet]
                                         Julius received the Best Presenter award among the Computer Science students who participated during college days.
                                     </p>
