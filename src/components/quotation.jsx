@@ -11,7 +11,7 @@ export default function Quotation() {
             <div className="flex-1 pr-4 min-h-32 max-h-32 bg-gray-800 rounded-md ">
                 <div className=' text-blue-200 text-left leading-relaxed pl-4 pt-4 font-semibold 2xl:pt-2 sm:text-xs  '>
                 <TypeAnimation
-                className='max-sm:text-sm  text-justify max-sm:font-light md:text-xl sm:font-light  sm:text-sm max-xs:text-xs'
+                className='max-sm:text-sm  text-justify max-sm:font-light md:text-xl sm:font-light  sm:text-sm max-xs:text-xs md:font-bold'
                     sequence={[
                         "Hi! I'm a developer and programmer with a passion for Intelligent Systems. I've had the privilege of working on some impactful projects and would love to share my achievements so far.",
                         1000, // optional pause at end

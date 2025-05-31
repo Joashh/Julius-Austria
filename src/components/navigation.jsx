@@ -78,7 +78,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
           {isVisible && (
             
             <motion.div
-              className="flex flex-col items-center justify-center mt-auto gap-3 pb-5  max-sm:hidden sm:hidden"
+              className="flex flex-col items-center justify-center mt-auto gap-3 pb-5  max-md:hidden  "
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -50 }}

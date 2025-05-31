@@ -88,7 +88,7 @@ export default function Certifications() {
                             <div className="flex items-start space-x-4 max-sm:w-full  ">
                                 <img
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
-                                    src="images/placeholder.png"
+                                    src="images/japan.jpg"
                                     alt="Best Presenter"
                                     onClick={() => handleImageClick("images/placeholder.png")}
                                 />
@@ -121,7 +121,7 @@ export default function Certifications() {
                             <div className="flex items-start space-x-4 ">
                                 <img
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto "
-                                    src="images/placeholder.png"
+                                    src="images/japan.jpg"
                                     alt="Best Presenter"
                                     onClick={() => handleImageClick("images/placeholder.png")}
                                 />
