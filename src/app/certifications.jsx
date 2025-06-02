@@ -52,7 +52,7 @@ export default function Certifications() {
                                     slidesPerView={1}
                                     className="default-carousel"
                                 >
-                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                                         <SwiperSlide key={num}>
                                             <div className="bg-gray-900 rounded-2xl h-[calc(90vh-200px)] w-full flex justify-center items-center max-sm:h-50">
                                                 <img
@@ -87,15 +87,14 @@ export default function Certifications() {
                             {/* Card 1 */}
                             <div className="flex items-start space-x-4 max-sm:w-full  ">
                                 <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
-                                    src="images/japan.jpg"
+                                    className="w-40 h-32  object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto"
+                                    src="images/researchcongress2.jpg"
                                     alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/japan.jpg")}
+                                    onClick={() => handleImageClick("images/researchcongress.jpg")}
                                 />
                                 <div>
                                     <h1 className="font-bold max-sm:text-sm"> 🏅 Best Presenter in Research Congress 2025</h1>
                                     <p className="font-light text-justify pt-1  text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
-                                        [Certificate Not Yet Released]
                                         I have received the Best Presenter award among the Computer Science students who participated during my 4th year college.
                                     </p>
                                 </div>

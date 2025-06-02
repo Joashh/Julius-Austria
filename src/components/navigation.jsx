@@ -94,7 +94,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
               <button
                 className="bg-gray-800 w-12 h-12 rounded-full shadow-lg hover:bg-gray-700 active:bg-gray-900 flex items-center justify-center"
                 onClick={handleNext}
-                disabled={currentProject === 6}
+                disabled={currentProject === 9}
               >
                 <ArrowDownCircleIcon className="h-8 w-8 text-white hover:text-blue-300" />
               </button>
