@@ -1,4 +1,4 @@
-import { FaLinkedin, FaInstagram, FaGithubSquare, FaInbox } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare, FaInbox } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -21,14 +21,14 @@ Connect with me on LinkedIn or Instagram, or just drop me an email!
           </div>
 
           <div className="flex items-center justify-center gap-2">
-            <FaInstagram className="text-white" />
-            <a href="https://www.instagram.com/joash_astr" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              Instagram
+            <FaGithubSquare className="text-white" />
+            <a href="https://github.com/Joashh" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Github
             </a>
           </div>
 
           <div className="flex items-center justify-center gap-2">
-            <FaInbox className="text-white" />
+            <FaEnvelopeSquare className="text-white" />
             <a href="mailto:arnelwowie@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Gmail
             </a>
