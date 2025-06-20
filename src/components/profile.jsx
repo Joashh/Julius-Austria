@@ -1,21 +1,22 @@
 'use client';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { themecontext } from "@/app/themecontext";
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub } from 'react-icons/fa';
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Profile() {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const {theme} = useContext(themecontext);
   
   return (
     <>
       <div
         
         className={`transition-all duration-500 ease-in-out 
-          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-900" : "min-h-32 max-h-32  bg-gray-800 rounded-md p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 flex flex-col gap-2 overflow-hidden max-sm:max-h-200 max-sm:p-5  max-sm:justify-center "}
+          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-100 dark:bg-gray-900" : "min-h-32 max-h-32  bg-white/50 shadow-2xl dark:bg-gray-800 rounded-md p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 flex flex-col gap-2 overflow-hidden max-sm:max-h-200 max-sm:p-5  max-sm:justify-center "}
         `}
-      >
+      data-theme={theme || "light"}>
 
         {!isExpanded ? (
           <div className="max-sm:flex-col flex  ">
@@ -27,11 +28,11 @@ export default function Profile() {
             />
             <div className="space-y-2 text-center pl-5 sm:text-left cursor-pointer max-sm:text-left  max-sm:space-y-0 max-sm:justify-center max-sm:flex max-sm:pl-0" onClick={() => setIsExpanded(!isExpanded)}>
               <div className="space-y-0.5 max-sm:space-y-0  max-sm:flex max-sm:flex-col max-sm:items-center max-sm:pt-3 ">
-                <p className="text-lg font-semibold text-white max-sm:text-2xl ">Julius Asher P. Austria</p>
-                <p className="font-medium text-gray-500 text-md max-sm:text-lg ">Computer Science Degree</p>
+                <p className="text-lg font-semibold text-black dark:text-white max-sm:text-2xl ">Julius Asher P. Austria</p>
+                <p className="font-medium text-gray-500 dark:text-gray-500 text-md max-sm:text-lg ">Computer Science Degree</p>
                 <a
                 href="https://github.com/Joashh"
-                className="border-purple-200 text-blue-400 hover:border-transparent max-md:text-xs hover:text-white max-sm:hidden "
+                className="border-purple-200 text-blue-800 dark:text-blue-400 hover:border-transparent max-md:text-xs hover:text-white max-sm:hidden "
               >
                 Github
               </a>
@@ -41,7 +42,7 @@ export default function Profile() {
           </div>
         ) : (
           <>
-           <div className="fixed z-50 flex flex-col items-center justify-center bg-gray-950 rounded-lg p-10 shadow-lg max-sm:w-full md:flex-row">
+           <div className="fixed z-50 flex flex-col items-center justify-center bg-white dark:bg-gray-950 rounded-lg p-10 shadow-2xl max-sm:w-full md:flex-row">
            
             <img
               className="w-60 h-60  rounded-full shadow-lg max-md:w-30 max-md:h-30"
@@ -66,9 +67,9 @@ export default function Profile() {
             
 
             <div className=" pt-5 gap-3 flex max-sm:justify-center ">
-            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs" onClick={() => setIsExpanded(!isExpanded)}>View Portfolio</button>
+            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs text-white " onClick={() => setIsExpanded(!isExpanded)}>View Portfolio</button>
             <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
-            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs">Download Resume</button>
+            <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium hover:bg-gray-600 active:bg-gray-800 max-md:text-xs text-white">Download Resume</button>
             </a>
             </div>
             </div>

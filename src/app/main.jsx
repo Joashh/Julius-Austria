@@ -14,9 +14,9 @@ export default function Main() {
     const [showNavigation, setShowNavigation] = useState(true);
     const lastScrollY = useRef(0);
 
-    
 
-    
+
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -52,7 +52,7 @@ export default function Main() {
 
     return (
         <>
-            <div className="h-full flex flex-col pl-4 pr-4  pb-5 min-h-0 ">
+            <div className="h-full flex flex-col pl-4 pr-4  pb-5 min-h-0 bg-transparent">
 
                 <div className="py-2 ">
                     <Tracer activeSlide={currentSlide} />
@@ -76,7 +76,7 @@ export default function Main() {
 
 
 
-                    <div className=" bg-gray-800  rounded-md scrollbar-custom flex-grow overflow-y-auto h-full min-h-0 max-sm:bg-transparent ">
+                    <div className=" bg-transparent rounded-md scrollbar-custom flex-grow overflow-y-auto h-full min-h-0 max-sm:bg-transparent ">
                         {currentSlide === 0 &&
                             <motion.div
 
@@ -104,8 +104,11 @@ export default function Main() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ duration: 0.3 }}
+                                className="h-full w-full"
                             >
-                                <Skills />
+                                
+                                    <Skills />
+                                
                             </motion.div>
                         }
                         {currentSlide === 3 &&

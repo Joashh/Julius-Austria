@@ -1,14 +1,17 @@
 @import "tailwindcss";
 @source "../views";
 @layer theme, base, components, utilities;
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 
-  
 /* You can also use the 'dark' class to manually toggle dark mode */
 body {
-  background-color: #1a202c;
-  color: #e2e8f0;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
 
   /* Custom Scrollbar */
 @layer components {
@@ -48,6 +51,24 @@ body {
   }
 }
 
+[data-theme="light"], :root:not([data-theme="dark"]) {
+  --background: #f3f4f6; /* gray-100 */
+  --foreground: #111827; /* gray-900 for text (optional) */
+}
+
+[data-theme="dark"] {
+  --background: #111827; /* gray-900 */
+  --foreground: #f3f4f6; /* gray-100 for text */
+}
+
+
+/* Also respect system preference if no data-theme attribute */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #121212;
+    --foreground: #e0e0e0;
+  }
+}
 @theme {
   --breakpoint-xs: 380px;
   --breakpoint-sm: 1024px;

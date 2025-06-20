@@ -86,13 +86,13 @@ export default function Projects({ currentProject, setCurrentProject }) {
 
   return (
     <>
-      <div className="relative w-full h-full max-h-full max-sm:h-auto max-sm:min-h-120 ">
+      <div className="relative w-full h-full max-h-full max-sm:h-auto max-sm:min-h-120  ">
         <div>
-          <h1 className=" sm:hidden md:hidden w-full font-bold text-3xl pl-6 pt-3 2xl:pl-16 2xl:text-5xl max-sm:h-auto max-sm:text-sm max-sm:text-center text-blue-300 max-sm:pl-0 max-sm:pt-0 max-sm:pb-2">
+          <h1 className=" sm:hidden md:hidden w-full font-bold text-3xl pl-6 pt-3 2xl:pl-16 2xl:text-5xl max-sm:h-auto max-sm:text-sm max-sm:text-center text-black dark:text-blue-300 max-sm:pl-0 max-sm:pt-0 max-sm:pb-2">
             DEVELOPED PROJECTS
           </h1>
         </div>
-        <div className="flex flex-col overflow-hidden h-full max-sm:rounded-lg max-sm:min-h-120 max-sm:max-h-120 ">
+        <div className="flex flex-col  overflow-hidden h-full max-sm:rounded-lg max-sm:min-h-120 max-sm:max-h-120 ">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={currentProject}
@@ -114,10 +114,10 @@ export default function Projects({ currentProject, setCurrentProject }) {
 
               {/* Overlay container */}
               <div
-                className=" absolute bottom-0 left-0 w-full h-full max-sm:from-gray-800 max-md:to-transparent
-    bg-gradient-to-t from-black to-transparent
+                className=" absolute bottom-0 left-0 w-full h-full dark:md:from-black from-gray-500 dark:from-black max-md:to-transparent
+    bg-gradient-to-t  dark:to-transparent
     flex flex-col justify-end p-4
-    max-sm:max-h-60 max-sm:min-h-60 max-sm:bg-black max-sm:p-5 "
+    max-sm:max-h-60 max-sm:min-h-60 bg-white md:bg-transparent dark:bg-transparent max-sm:p-5 "
               >
                 <div>
                   <div
@@ -133,10 +133,10 @@ export default function Projects({ currentProject, setCurrentProject }) {
                       />
                     ))}
                   </div>
-                  <h1 className="text-white text-xl font-semibold pb-2 md:p-4 max-sm:max-h-14 max-sm:min-h-14 max-sm:text-sm max-sm:text-center ">
+                  <h1 className="max-sm:text-black dark:text-white text-xl font-semibold pb-2 md:p-4 max-sm:max-h-14 max-sm:min-h-14 max-sm:text-sm max-sm:text-center ">
                     {projects[currentProject].title}
                   </h1>
-                  <p className="w-1/2 text-justify text-white md:p-4 max-sm:w-full max-sm:text-xs  max-sm:min-h-20 max-sm:max-h-20  ">
+                  <p className="w-1/2 text-justify max-sm:text-black dark:text-white md:p-4 max-sm:w-full max-sm:text-xs  max-sm:min-h-20 max-sm:max-h-20  ">
                     {projects[currentProject].description}
                   </p>
 
@@ -194,7 +194,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
             <div
               key={index}
               onClick={() => setCurrentProject(index)}
-              className={`w-3 h-3 rounded-full cursor-pointer max-sm:h-1 max-sm:shadow-sm max-sm:shadow-black ${index === currentProject ? "bg-blue-500 " : "bg-gray-500 "
+              className={`w-3 h-3 rounded-full cursor-pointer max-sm:h-1  max-sm:shadow-black ${index === currentProject ? "bg-blue-500 " : "bg-gray-500 "
                 } transition-all`}
             />
           ))}

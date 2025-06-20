@@ -1,15 +1,16 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
-
+import { themecontext } from '@/app/themecontext';
+import { useContext } from "react";
 
 export default function Quotation() {
 
-     
+    
     return (
         <div className="flex flex-row items-center w-full gap-4 flex-1 ">
             {/* Column 1: Text */}
-            <div className="flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-gray-800 rounded-md ">
-                <div className=' text-blue-200 text-left leading-relaxed pl-4 pt-4 font-semibold 2xl:pt-2 sm:text-xs  '>
+            <div className="transition-all duration-500 ease-in-out  flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-white/50 backdrop-blur-xs shadow-2xl dark:bg-gray-800 rounded-md ">
+                <div className='text-black dark:text-blue-200 text-left leading-relaxed pl-4 pt-4 font-semibold 2xl:pt-2 sm:text-xs  '>
                 <TypeAnimation
                 className='max-sm:text-sm  text-justify max-sm:font-light md:text-xl sm:font-light  sm:text-sm max-xs:text-xs md:font-bold'
                     sequence={[
@@ -29,7 +30,7 @@ export default function Quotation() {
             </div>
 
             {/* Column 2: Icons */}
-            <div className="flex flex-col items-center justify-center space-y-4 min-h-32 max-h-32 bg-gray-800 rounded-md max-w-15 w-full">
+            <div className="transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-4 min-h-32 max-h-32 bg-white/50 shadow-2xl dark:bg-gray-800 rounded-md max-w-15 w-full">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                     <FaFacebook className="h-6 w-6 text-blue-600 hover:text-blue-700" />
                 </a>

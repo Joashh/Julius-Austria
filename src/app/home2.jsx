@@ -3,22 +3,21 @@ import Header from '../components/header.jsx';
 import Main from './main.jsx';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Footer from '@/components/footer.jsx';
 import Lottie from "lottie-react";
 import bgstart from '../assets/bg.json';
-
+import { themecontext } from './themecontext.jsx';
 
 export default function Home2() {
+    const {theme} = useContext(themecontext);
     const [isExpanded, setIsExpanded] = useState(false);
     return (
         <> 
         {!isExpanded ? (
-             <div className="relative w-screen h-screen overflow-hidden">
-      {/* Background Lottie */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 hidden max-xs:block ">
-            <Lottie animationData={bgstart} loop autoplay className="w-full h-full"  />
-        </div>
+             <div className="relative w-screen h-screen overflow-hidden " data-theme={theme || "light"} 
+             >
+      
         
             
             <div className=" z-50 flex items-center justify-center  rounded-lg p-10 shadow-lg w-screen min-h-screen max-sm:flex-col ">
@@ -29,8 +28,8 @@ export default function Home2() {
                     alt=""
                 />
                 <div className="flex flex-col pl-7 max-sm:pl-0 max-sm:pt-5 max-sm:items-center max-sm:justify-center max-sm:w-full max-sm:text-center ">
-    <h1 className="text-blue-300 md:text-3xl font-bold text-2xl">I'm Julius</h1>
-    <p className="text-2xl font-light min-w-100 max-sm:text-lg text-white">Software and AI Developer</p>
+    <h1 className="text-blue-900 dark:text-blue-300 md:text-3xl font-bold text-2xl">I'm Julius</h1>
+    <p className="text-2xl font-light min-w-100 max-sm:text-lg text-black dark:text-white">Software and AI Developer</p>
     
     <TypeAnimation
         className="pt-3 min-h-20 text-justify text-sm font-light min-w-100 max-w-30  max-sm:px-10 max-sm:text-center max-sm:text-xs"
@@ -44,12 +43,12 @@ export default function Home2() {
     />
 
     <div className="pt-5 gap-3 flex max-sm:flex-row max-sm:items-center">
-        <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
+        <button className="text-white dark:bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
         onClick={() => setIsExpanded(!isExpanded)}>
             View Portfolio
         </button>
         <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
-        <button className="bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
+        <button className="text-white bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
             Download Resume
         </button>
         </a>
@@ -59,7 +58,15 @@ export default function Home2() {
             </div>
         ) : (
 
-            <div className='flex flex-col h-screen max-sm:h-auto '>
+           <div
+  className="flex flex-col h-screen max-sm:h-auto transition-all duration-500 ease-in-out bg-white dark:bg-gray-900"
+  data-theme={theme || "light"}
+  style={{
+    backgroundImage: theme === "light" ? 'url("images/bggg.jpg")' : "none",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
 
                 <motion.div
                     initial={{ y: -50, opacity: 0 }}
