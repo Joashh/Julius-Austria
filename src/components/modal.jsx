@@ -8,7 +8,7 @@ export default function Modal({ showModal, setShowModal, imgsrc }) {
 
       {showModal && (
         <div
-          className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 "
+          className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 h-screen p-5 "
           onClick={() => setShowModal(false)}
         >
           <motion.div
@@ -18,11 +18,11 @@ export default function Modal({ showModal, setShowModal, imgsrc }) {
             transition={{ duration: 0.3 }}
           >
           <div
-            className="bg-gray-800  p-3  rounded shadow-lg max-w-3xl w-full max-h-screen"
+            className="bg-gray-800  p-3 rounded shadow-lg max-w-3xl  h-auto w-auto"
             onClick={(e) => e.stopPropagation()} // prevents closing when clicking inside
           >
 
-            <img className="rounded-md h-full w-full" src={imgsrc} alt="" />
+            <img className="rounded-md  w-auto h-auto md:max-w-150" src={imgsrc} alt="" onClick={() => setShowModal(false)}/>
             
           
         </div>

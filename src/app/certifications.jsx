@@ -52,7 +52,7 @@ export default function Certifications() {
                                     slidesPerView={1}
                                     className="default-carousel"
                                 >
-                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => (
                                         <SwiperSlide key={num}>
                                             <div className="bg-gray-900 rounded-2xl h-[calc(90vh-200px)] w-full flex justify-center items-center max-sm:h-50">
                                                 <img
@@ -82,8 +82,26 @@ export default function Certifications() {
                         </div>
                     </div>
 
-                    <div className="w-auto pt-8 pl-4  2xl:w-full 2xl:pt-20 2xl:pl-13 max-sm:w-full max-sm:pl-0 ">
-                        <div className="space-y-4 px-7 max-sm:px-0  ">
+                    
+
+                    <div className="flex flex-col w-auto pt-8 pl-4 md:justify-center  2xl:w-full 2xl:pt-20 2xl:pl-13 max-sm:w-full max-sm:pl-0 ">
+                        
+                        <div className="flex flex-col gap-y-4 px-7 max-sm:px-0  ">
+                             <div className="flex items-start space-x-4  ">
+                                <img
+                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto "
+                                    src="images/japan.jpg"
+                                    alt="Best Presenter"
+                                    onClick={() => handleImageClick("images/cert11.png")}
+                                />
+                                <div>
+                                    <h1 className="font-bold max-sm:text-sm">🏅 Summa Cum Laude (Valedictorian)</h1>
+                                    <p className="font-light text-justify pt-1 text-xs2xl:w-90 max-sm:w-full max-sm:text-xs">
+                                        He graduated Summa Cum Laude with a BS in Computer Science and was recognized Class Valedictorian for his academic excellence.
+                                    </p>
+                                </div>
+                            </div>
+
                             {/* Card 1 */}
                             <div className="flex items-start space-x-4 max-sm:w-full  ">
                                 <img
@@ -95,7 +113,7 @@ export default function Certifications() {
                                 <div>
                                     <h1 className="font-bold max-sm:text-sm"> 🏅 Best Presenter in Research Congress 2025</h1>
                                     <p className="font-light text-justify pt-1  text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
-                                        I have received the Best Presenter award among the Computer Science students who participated during my 4th year college.
+                                        He received the Best Presenter Award among Computer Science students during his fourth year in college, recognizing his excellent to convey technical ideas.
                                     </p>
                                 </div>
                             </div>
@@ -104,34 +122,20 @@ export default function Certifications() {
                             <div className="flex items-start space-x-4 ">
                                 <img
                                     className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto  md:h-auto"
-                                    src="images/cert7.png"
+                                    src="images/cert12.png"
                                     alt="Copyrighted App"
-                                    onClick={() => handleImageClick("images/cert7.png")}
+                                    onClick={() => handleImageClick("images/cert12.png")}
                                 />
                                 <div>
-                                    <h1 className="font-bold max-sm:text-sm  max-sm:w-full">🏅 First Copyrighted Mobile Application 2024</h1>
+                                    <h1 className="font-bold max-sm:text-sm  max-sm:w-full">🏅 Proficiency Award </h1>
                                     <p className="font-light text-justify pt-1  text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs ">
-                                        In their third year of college, User's group developed a mobile app for kids that measures their abilities and skills. The app was patented or copyrighted.
+                                        In the field of Intelligent Systems programs. This honor recognizes his academic excellence and active participation in uplifting the academic and application-based morale of the program.
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Card 3 (duplicate of Card 1) */}
-                            <div className="flex items-start space-x-4 ">
-                                <img
-                                    className="w-40 h-32 object-cover rounded-lg cursor-pointer lg:w-70 lg:h-auto "
-                                    src="images/japan.jpg"
-                                    alt="Best Presenter"
-                                    onClick={() => handleImageClick("images/japan.jpg")}
-                                />
-                                <div>
-                                    <h1 className="font-bold max-sm:text-sm">🏅 Latin Honor College Degree</h1>
-                                    <p className="font-light text-justify pt-1 text-sm 2xl:w-90 max-sm:w-full max-sm:text-xs">
-                                        [No Graduation Details Yet]
-                                        Julius received the Best Presenter award among the Computer Science students who participated during college days.
-                                    </p>
-                                </div>
-                            </div>
+                            
+                           
                         </div>
 
                     </div>
