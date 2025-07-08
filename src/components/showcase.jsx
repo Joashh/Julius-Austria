@@ -2,7 +2,7 @@ import { ShareIcon, EllipsisHorizontalCircleIcon, EllipsisHorizontalIcon, Ellips
 export default function Showcase() {
     return (
 
-        <div className="md:bg-white/50 backdrop-blur-xs dark:md:bg-gray-800   p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto max-sm:bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
+        <div className="sm:bg-white/50 backdrop-blur-xs dark:sm:bg-gray-800   p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
             {/* Item 1 */}
             <h1 className='text-sm  text-center text-black dark:text-blue-300 font-bold sm:hidden pt-3'> ACADEMIC BACKGROUND</h1>
             <div id="ITEM 1" className='max-sm:w-full '>

@@ -18,7 +18,7 @@ export default function Modal({ showModal, setShowModal, imgsrc }) {
             transition={{ duration: 0.3 }}
           >
           <div
-            className="bg-gray-800  p-3 rounded shadow-lg max-w-3xl  h-auto w-auto"
+            className="dark:bg-gray-800 bg-white p-3 rounded shadow-lg max-w-3xl  h-auto w-auto"
             onClick={(e) => e.stopPropagation()} // prevents closing when clicking inside
           >
 

@@ -9,10 +9,10 @@ export default function Quotation() {
     return (
         <div className="flex flex-row items-center w-full gap-4 flex-1 ">
             {/* Column 1: Text */}
-            <div className="transition-all duration-500 ease-in-out  flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-white/50 backdrop-blur-xs shadow-2xl dark:bg-gray-800 rounded-md ">
-                <div className='text-black dark:text-blue-200 text-left leading-relaxed pl-4 pt-4 font-semibold 2xl:pt-2 sm:text-xs  '>
+            <div className="transition-all duration-500 ease-in-out flex flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-white/50 backdrop-blur-xs shadow-2xl dark:bg-gray-800 rounded-md justify-center  ">
+                <div className='text-black dark:text-blue-200 text-left leading-relaxed pl-4  font-semibold  sm:text-xs  '>
                 <TypeAnimation
-                className='max-sm:text-sm  text-justify max-sm:font-light md:text-xl sm:font-light  sm:text-sm max-xs:text-xs md:font-bold'
+                className='text-sm md:text-lg lg:text-xl text-justify max-sm:font-light  sm:font-bold   md:font-bold'
                     sequence={[
                         "Hi! I'm a developer and programmer with a passion for Intelligent Systems. I've had the privilege of working on some impactful projects and would love to share my achievements so far.",
                         1000, // optional pause at end
@@ -23,18 +23,17 @@ export default function Quotation() {
                     repeat={0}
                 />
                 </div>
-                <p className='text-gray-500 pl-4 pb-4 pt-2 2xl:text-lg 2xl:pt-0 max-sm:hidden sm:pt-0  sm:text-xs lg:text-sm md:text-xs'>My mission is to make a positive
-                    impact on the world through
-                    innovative computer science
-                    projects.</p>
+                <p className='text-gray-500 pl-4  pt-2 2xl:text-lg 2xl:pt-0 max-sm:hidden sm:pt-0  sm:text-xs lg:text-sm md:text-xs'>
+                    Navigate through the icons to see all my works, certificates, and skills.
+                </p>
             </div>
 
             {/* Column 2: Icons */}
             <div className="transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-4 min-h-32 max-h-32 bg-white/50 shadow-2xl dark:bg-gray-800 rounded-md max-w-15 w-full">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com" target="_blank" title="Facebook" rel="noopener noreferrer">
                     <FaFacebook className="h-6 w-6 text-blue-600 hover:text-blue-700" />
                 </a>
-                <a href="https://www.linkedin.com/in/julius-asher-p-austria-889473333/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/julius-asher-p-austria-889473333/" title="Facebook" target="_blank" rel="noopener noreferrer">
                     <FaLinkedinIn className="h-6 w-6 text-blue-400 hover:text-blue-500" />
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">

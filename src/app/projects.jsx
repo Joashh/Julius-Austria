@@ -143,11 +143,11 @@ export default function Projects({ currentProject, setCurrentProject }) {
                   <div className="flex justify-between items-center pt-3 md:p-4 max-sm:gap-2">
                     {/* Left-side buttons */}
                     <div className="flex gap-4">
-                      <button className="bg-gray-800 p-3 rounded-md shadow-lg max-sm:text-xs hover:bg-gray-700 active:bg-gray-900 text-white">
+                      <button className="bg-gray-300 dark:bg-gray-800 p-3 rounded-md shadow-lg max-sm:text-xs hover:bg-gray-700 active:bg-gray-900 text-black font-bold dark:text-white">
                         Documentation
                       </button>
                       <button
-                        className="bg-gray-800 p-3 max-sm:text-xs rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-900 text-white"
+                        className="bg-gray-300 dark:bg-gray-800 p-3 max-sm:text-xs rounded-md shadow-lg hover:bg-gray-700 active:bg-gray-900 text-black font-bold dark:text-white"
                         onClick={() => window.open(projects[currentProject].githubLink, "_blank")}
                       >
                         Github

@@ -76,7 +76,7 @@ export default function Main() {
 
 
 
-                    <div className=" bg-transparent rounded-md scrollbar-custom flex-grow overflow-y-auto h-full min-h-0 max-sm:bg-transparent ">
+                    <div className="rounded-md scrollbar-custom flex-grow overflow-y-auto w-full h-full min-h-0 max-sm:bg-transparent ">
                         {currentSlide === 0 &&
                             <motion.div
 
@@ -94,6 +94,7 @@ export default function Main() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
                                 transition={{ duration: 0.3 }}
+                                className="h-full w-full"
                             >
                                 <Certifications />
                             </motion.div>
