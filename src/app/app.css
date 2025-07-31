@@ -4,6 +4,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 
+
 /* You can also use the 'dark' class to manually toggle dark mode */
 body {
   background-color: var(--background);

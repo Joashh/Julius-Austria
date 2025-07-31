@@ -48,6 +48,18 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description: "A simple chatbot built with Streamlit and Natural Language Processing (NLP) to automate and streamline student inquiries for LSPU Enrollment.",
       githubLink: "https://github.com/Joashh/NLP-Chatbot/tree/main",
     },
+    {
+      image: "images/chatbot2.png",
+      title: "FLEXIBLE Chatbot",
+      description: "This is an experimental chatbot project powered by AI, showcasing the capabilities of large language models (LLMs) through natural conversation.",
+      githubLink: "https://github.com/Joashh/chatbot",
+    },
+    {
+      image: "images/weather.png",
+      title: "BRAINY - Rain Forecast",
+      description: "A simple and beautiful weather forecast application built with Next.js, React, and Tailwind CSS, powered by the OpenWeatherMap API. Search any city, country, or address to get the latest 5-day forecast and weather conditions. It is available at https://brainy-weather.vercel.app/",
+      githubLink: "https://github.com/Joashh/brainy",
+    },
   ];
 
   // Track previous project index to get direction (for slide animation)
@@ -133,10 +145,10 @@ export default function Projects({ currentProject, setCurrentProject }) {
                       />
                     ))}
                   </div>
-                  <h1 className="max-sm:text-black dark:text-white text-xl font-semibold pb-2 md:p-4 max-sm:max-h-14 max-sm:min-h-14 max-sm:text-sm max-sm:text-center ">
+                  <h1 className="max-sm:text-black dark:text-white text-white  text-xl font-semibold pb-2 md:p-4 max-sm:max-h-14 max-sm:min-h-14 max-sm:text-sm max-sm:text-center ">
                     {projects[currentProject].title}
                   </h1>
-                  <p className="w-1/2 text-justify max-sm:text-black dark:text-white md:p-4 max-sm:w-full max-sm:text-xs  max-sm:min-h-20 max-sm:max-h-20  ">
+                  <p className="w-1/2 text-justify max-sm:text-black dark:text-white text-white md:p-4 max-sm:w-full max-sm:text-xs  max-sm:min-h-20 max-sm:max-h-20  ">
                     {projects[currentProject].description}
                   </p>
 

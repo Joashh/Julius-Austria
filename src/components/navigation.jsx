@@ -1,7 +1,7 @@
 'use client';
 import { HomeIcon, InformationCircleIcon, BoltIcon, ComputerDesktopIcon, DocumentIcon, Bars3Icon, BuildingOffice2Icon, ArrowUpCircleIcon, ArrowDownCircleIcon, TrophyIcon } from '@heroicons/react/24/solid';
 import { FaAward, FaLightbulb, FaSun, FaMoon } from 'react-icons/fa';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { themecontext } from "@/app/themecontext";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -19,12 +19,13 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
   const [statenav, setStateNav] = useState(false);
   const { theme, setTheme } = useContext(themecontext);
   const handleNext = () => {
-    setCurrentProject((prev) => prev + 1);
-  };
+  setCurrentProject((prev) => Math.min(prev + 1, 8)); 
+};
 
-  const handlePrev = () => {
-    setCurrentProject((prev) => Math.max(prev - 1, 0));
-  };
+const handlePrev = () => {
+  setCurrentProject((prev) => Math.max(prev - 1, 0)); 
+};
+
 
   const [clickstate, setclickstate] = useState(0);
  
@@ -41,6 +42,23 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
             document.documentElement.classList.remove("dark");
         }
     }
+
+    useEffect(() => {
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowDown') {
+      handleNext();
+    }
+    if (event.key === 'ArrowUp') {
+      handlePrev();
+    }
+  };
+
+  window.addEventListener('keydown', handleKeyDown);
+
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+  };
+}, []);
 
 
   return (
@@ -116,7 +134,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
               <button
                 className="bg-gray-300  dark:bg-gray-800 w-12 h-12 rounded-full shadow-lg hover:bg-gray-400 dark:hover:bg-gray-700 active:bg-gray-900 flex items-center justify-center"
                 onClick={handleNext}
-                disabled={currentProject === 6}
+                disabled={currentProject === 8}
               >
                 <ArrowDownCircleIcon className="h-8 w-8 text-gray-500 dark:text-white hover:text-gray-700 dark:hover:text-blue-300" />
               </button>

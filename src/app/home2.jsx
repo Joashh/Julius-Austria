@@ -41,7 +41,7 @@ export default function Home2() {
                             />
 
                             <div className="pt-5 gap-3 flex max-sm:flex-row max-sm:items-center">
-                                <button className="text-white dark:bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
+                                <button className="text-white bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
                                     onClick={() => setIsExpanded(!isExpanded)}>
                                     View Portfolio
                                 </button>
