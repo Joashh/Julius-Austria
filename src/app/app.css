@@ -62,6 +62,38 @@ body {
   --foreground: #f3f4f6; /* gray-100 for text */
 }
 
+@media (max-height: 900px) {
+  .carousel-wrapper {
+    height: 100%;
+    gap: 0;
+  }
+}
+
+@media (max-height: 900px) {
+  .carousel-text {
+    font-size: smaller;
+  }
+}
+
+@media (max-height: 700px) {
+  .carousel-display {
+    display: none;
+  }
+}
+
+@media (max-height: 800px) {
+  .carousel-display-1 {
+    display: none;
+  }
+}
+
+@media (max-height: 800px) {
+  .carousel-height {
+    height: 60vh;
+  }
+}
+
+
 
 /* Also respect system preference if no data-theme attribute */
 @media (prefers-color-scheme: dark) {

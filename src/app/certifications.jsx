@@ -20,7 +20,7 @@ export default function Certifications() {
 
         <div className="flex flex-col md:flex-row w-full rounded-md h-full  bg-white/50 dark:bg-gray-800 overflow-auto">
                 <h1 className='sm:hidden p-3 text-center font-bold text-md text-black dark:text-blue-300'>Certificates and Awards</h1>
-            <div className=' sm:py-5 md:w-1/2 md:p-2'>
+            <div className='self-center sm:py-5 md:w-1/2 md:p-2'>
                 <Carousel />
             </div>
 

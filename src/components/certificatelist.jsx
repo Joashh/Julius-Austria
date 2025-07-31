@@ -49,27 +49,27 @@ export default function CertificateList() {
     return (
         <>
             <div className="flex flex-col sm:flex-row md:flex-col w-full  justify-center p-5 sm:h-full sm:p-0">
-
-                <div className="flex flex-col sm:flex-row md:flex-col sm:gap-x-4 gap-y-4 px-7 max-sm:px-0 sm:h-full md:w-full md:gap-0">
+               
+                <div className="flex flex-col sm:flex-row md:flex-col sm:gap-x-4  px-7  max-sm:px-0  md:w-full gap-y-4 h-full md:carousel-wrapper ">
 
                     {awards.map((items, index) => (
-                        <div key={index} className="w-full sm:flex sm:flex-col md:flex-row sm:justify-center md:justify-left sm:h-full   ">
+                        <div key={index} className="w-full sm:flex sm:flex-col md:flex-row sm:justify-center md:justify-left sm:h-full ">
 
                             <img
-                                className="w-35 h-25 md:w-50 md:h-40 lg:w-65 lg:h-50 float-left mr-3 mb-2  rounded-md object-cover sm:self-center md:float-left md:mr-3 md:mb-0 "
+                                className=" w-35 h-25 md:w-50 md:h-40 lg:w-65 lg:h-50 float-left mr-3 mb-2  rounded-md object-cover sm:self-center md:float-left md:mr-3 md:mb-0 "
                                 src={items.image_url}
                                 alt={items.alt}
                                 onClick={() => handleImageClick(items.image_url)}
                             />
 
-                            <div className=" md:h-40 md:flex md:flex-col md:self-center ">
-                                <h1 className="font-bold text-sm sm:text-center md:text-left md:text-lg">
+                            <div className=" md:h-40 md:flex md:flex-col md:self-center  ">
+                                <h1 className="font-bold text-sm sm:text-center md:text-left lg:text-xl md:text-lg">
                                     🏅 {items.title}
                                 </h1>
-                                <p className="font-light italic text-justify  sm:text-center sm:pb-4 md:pb-1 md:text-left md:dark:text-gray-300 pt-1 text-xs text-gray-700 dark:text-gray-500">
+                                <p className="font-light italic text-justify  sm:text-center sm:pb-4 md:pb-1 md:text-left md:dark:text-gray-300 pt-1 text-xs md:text-sm text-gray-700 dark:text-gray-500">
                                     {items.date}
                                 </p>
-                                <p className="font-light text-justify pt-1 md:text-sm sm:text-center md:text-justify text-xs text-gray-700 dark:text-white md:line-clamp-3 md:hover:line-clamp-none">
+                                <p className="font-light text-justify pt-1 md:text-sm lg:text-lg sm:text-center md:text-justify text-xs text-gray-700 dark:text-white md:line-clamp-3 md:hover:line-clamp-none carousel-text">
                                 {items.desc}
                             </p>
                             

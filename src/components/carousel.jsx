@@ -40,7 +40,7 @@ const handlePageChange = (newPage) => {
         <div className="flex flex-col justify-center w-full h-70 px-3 sm:h-90 md:h-full md:w-full md:justify-start md:pt-10">
 
 
-           <div className="relative flex dark:bg-gray-900 bg-gray-200 justify-center items-center w-full h-[60vh] rounded-xl overflow-hidden">
+           <div className="relative flex dark:bg-gray-900 bg-gray-200 justify-center items-center w-full h-[60vh] rounded-xl overflow-hidden carousel-height">
  <motion.div
   className="flex transition-transform duration-500 ease-in-out h-full w-full"
   animate={{ x: `-${(currentCert - 1) * 100}%` }}
@@ -94,11 +94,11 @@ const handlePageChange = (newPage) => {
   </div>
 </div>
 
-      <div className="p-3 w-full hidden md:block ">
-        <h1 className="font-bold text-xl text-black dark:text-blue-300">Certificates and Awards</h1>
-        <p className="text-justify pb-2">These are the overall certificates that I received throughout my journey in this industry. It includes seminars, recognitions, acknowledgements, and awards. Swipe left or right to view all or press the page indicators.</p>
+      <div className="p-3 w-full hidden md:block carousel-display  ">
+        <h1 className="font-bold text-xl                                                       text-black dark:text-blue-300">Certificates and Awards</h1>
+        <p className="text-justify text-lg pb-2 carousel-text">These are the overall certificates that I received throughout my journey in this industry. It includes seminars, recognitions, acknowledgements, and awards. Swipe left or right to view all or press the page indicators.</p>
         
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 carousel-display-1">
            <button className="dark:hover:bg-cyan-900 hover:bg-gray-500 bg-gray-400 dark:bg-cyan-800 rounded-full w-10 flex flex-col justify-center " onClick={handleCopy}>
           <IoIosShareAlt className="h-6 w-6 self-center"/>
         </button>
