@@ -78,34 +78,32 @@ const handlePrev = () => {
 
               <ul className="flex flex-col space-y-8 cursor-pointer py-4 max-sm:flex-row  max-sm:gap-x-10 max-sm:w-full max-sm:justify-center  max-sm:h-auto max-sm:py-3 max-sm:space-y-0">
                 <li className="flex items-center">
-                  <a href="#" onClick={() => { goToSlide('showcase'); toggleVisibility(false); setclickstate(0); }}>
-                    <BuildingOffice2Icon className={clickstate === 0 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} />
-                  </a>
+                    <BuildingOffice2Icon className={clickstate === 0 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('showcase'); toggleVisibility(false); setclickstate(0); }} />
                 </li>
                 <li className="flex items-center">
-                  <a href="#" onClick={() => { goToSlide('certifications'); toggleVisibility(false); setclickstate(1); }}>
-                    <TrophyIcon className={clickstate === 1 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} />
-                  </a>
+                  
+                    <TrophyIcon className={clickstate === 1 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('certifications'); toggleVisibility(false); setclickstate(1); }}/>
+                 
                 </li>
                 <li className="flex items-center">
-                  <a href="#" onClick={() => { goToSlide('skills'); toggleVisibility(false); setclickstate(2); }}>
-                    <BoltIcon className={clickstate === 2 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} />
-                  </a>
+                
+                    <BoltIcon className={clickstate === 2 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('skills'); toggleVisibility(false); setclickstate(2); }}/>
+                  
                 </li>
                 <li className="flex items-center">
-                  <a href="#" onClick={() => { goToSlide('projects'); toggleVisibility(true); setclickstate(3); }}>
-                    <ComputerDesktopIcon className={clickstate === 3 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} />
-                  </a>
+                  
+                    <ComputerDesktopIcon className={clickstate === 3 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('projects'); toggleVisibility(true); setclickstate(3); }}/>
+                  
                 </li>
-                 <li className="flex items-center">
-                  <a href="#" onClick={toggleTheme}>
+                 <li className="flex items-center" onClick={toggleTheme}>
+                 
                     {theme == "light" ? 
                   <FaMoon className="h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500 " />  
                   :
                   <FaSun className="h-7 w-7  dark:text-amber-400 hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500 " />
                 }
                     
-                  </a>
+                  
                 </li>
               </ul>
             </div>

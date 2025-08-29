@@ -37,7 +37,7 @@ const handlePageChange = (newPage) => {
 
 
     return (
-        <div className="flex flex-col justify-center w-full h-70 px-3 sm:h-90 md:h-full md:w-full md:justify-start md:pt-10">
+        <div className="flex flex-col justify-center w-full h-70 px-3 sm:h-90 md:h-full md:w-full md:justify-start ">
 
 
            <div className="relative flex dark:bg-gray-900 bg-gray-200 justify-center items-center w-full h-[60vh] rounded-xl overflow-hidden carousel-height">

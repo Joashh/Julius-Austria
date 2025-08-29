@@ -1,9 +1,13 @@
+
 @import "tailwindcss";
 
 :root {
   --background: #171717;
   --foreground: #171717;
 }
+
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -19,6 +23,13 @@
  
 }
 
+@layer base {
+  html,
+  :host {
+    text-size-adjust: 100%;              /* ✅ Standard syntax */
+    -webkit-text-size-adjust: 100%;      /* ✅ Fallback for old iOS Safari */
+  }
+}
 
 
 

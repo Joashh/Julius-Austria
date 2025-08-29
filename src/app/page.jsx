@@ -1,5 +1,5 @@
 
-import Home2 from "./home2";
+import Home2 from './tabs/home2';
 import './app.css';
 import {  useContext } from "react";
 import { themecontext } from "@/app/themecontext";

@@ -36,8 +36,8 @@ export default function Quotation() {
                 <a href="https://www.linkedin.com/in/julius-asher-p-austria-889473333/" title="Facebook" target="_blank" rel="noopener noreferrer">
                     <FaLinkedinIn className="h-6 w-6 text-blue-400 hover:text-blue-500" />
                 </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="h-6 w-6 text-pink-500 hover:text-pink-600" />
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"  aria-label="Instagram" >
+                    <FaInstagram className="h-6 w-6 text-pink-500 hover:text-pink-600" alt="Instagram" />
                 </a>
             </div>
         </div>

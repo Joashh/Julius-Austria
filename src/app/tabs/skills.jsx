@@ -1,11 +1,11 @@
 import Lottie from "lottie-react";
 
-import aiAnimation from "../assets/ai.json";
-import languagesAnimation from "../assets/languages.json";
-import toolsAnimation from "../assets/tools.json";
-import awardAnimation from "../assets/award.json";
-import participationAnimation from "../assets/participation.json";
-import awards2Animation from "../assets/award5.json";
+import aiAnimation from "@/assets/ai.json";
+import languagesAnimation from "@/assets/languages.json";
+import toolsAnimation from "@/assets/tools.json";
+import awardAnimation from "@/assets/award.json";
+import participationAnimation from "@/assets/participation.json";
+import awards2Animation from "@/assets/award5.json";
 
 let color = "bg-white/50";
 

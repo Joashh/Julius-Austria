@@ -1,13 +1,15 @@
 'use client';
 import Navigation from "../components/navigation";
-import Showcase from "../components/showcase";
+import Showcase from "./tabs/showcase";
 import Tracer from "../components/tracer";
-import Home2 from "./home2";
+import Home2 from "./tabs/home2";
 import React, { useState, useRef, useEffect } from 'react';
-import Certifications from './certifications';
+import Certifications from './tabs/certifications';
 import { motion } from "framer-motion";
-import Skills from "./skills";
-import Projects from "./projects";
+import Skills from "./tabs/skills";
+import Projects from "./tabs/projects";
+import GlassSurface from "@/components/GlassSurface";
+
 
 export default function Main() {
     const [currentSlide, setCurrentSlide] = useState(0); // State is here now
@@ -107,9 +109,9 @@ export default function Main() {
                                 transition={{ duration: 0.3 }}
                                 className="h-full w-full"
                             >
-                                
-                                    <Skills />
-                                
+
+                                <Skills />
+
                             </motion.div>
                         }
                         {currentSlide === 3 &&
@@ -123,6 +125,10 @@ export default function Main() {
                                 <Projects currentProject={currentProject} setCurrentProject={setCurrentProject} />
                             </motion.div>
                         }
+                    </div>
+
+                    <div className="md:hidden fixed bottom-4 right-4 z-50">
+                        
                     </div>
                 </div>
             </div>

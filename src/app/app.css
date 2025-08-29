@@ -1,7 +1,9 @@
 @import "tailwindcss";
+
 @source "../views";
 @layer theme, base, components, utilities;
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 
 
 
@@ -35,6 +37,16 @@ body {
   }
 
 }
+
+@layer base {
+  html,
+  :host {
+    text-size-adjust: 100%;              /* ✅ Standard syntax */
+    -webkit-text-size-adjust: 100%;      /* ✅ Fallback for old iOS Safari */
+  }
+}
+
+
 @layer components {
   .btn-primary {
     border-radius: calc(infinity * 1px);
@@ -68,6 +80,7 @@ body {
     gap: 0;
   }
 }
+
 
 @media (max-height: 900px) {
   .carousel-text {
