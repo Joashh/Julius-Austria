@@ -80,30 +80,43 @@ const skillCards = [
 
 export default function Skills() {
   return (
-   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-5 bg-white/50 backdrop-blur-xs shadow-xs shadow-black dark:bg-gray-800 h-full w-full overflow-auto">
+    <div className="w-full h-full flex flex-col gap-4">
+      <div className='shadow-md rounded-md bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
+                <h1 className="text-center text-xl md:text-2xl font-bold  text-gray-800 dark:text-blue-300 font-sans">
+                    Skills and Experience
+                </h1>
 
-    {skillCards.map((items, index) => 
-    (
-      <div key={index} className="bg-white dark:bg-cyan-900 rounded-lg shadow border-2 border-transparent hover:bg-transparent hover:border-gray-500 transition-all duration-700 ease-in-out p-4 ">
-        
+                <p className="text-gray-600 dark:text-gray-300 text-center text-sm md:text-base">
+                    An overview of my professional skills, technical expertise, and practical experience gained through projects, internships, and real-world applications.
+                </p>
+            </div>
 
-        <div className="flex h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6   overflow-auto h-full pb-2">
+      
+      {skillCards.map((items, index) =>
+      (
+        <div key={index} className="bg-white dark:bg-cyan-900 rounded-lg shadow-md border-2 border-transparent hover:bg-transparent hover:border-1 hover:border-gray-400 transition-all duration-200 ease-in-out p-4 ">
 
-          <div className=" flex flex-col justify-center h-full ">
-                  <Lottie animationData={items.animation} loop autoplay className="h-20 w-20 sm:h-30 sm:w-30 md:w-40 md:h-40 lg:w-50 lg:h-50" />
-        </div>
-        
-        <div className="text-justify text-xs pl-3 flex flex-col justify-center">
-          <h1 className="text-left font-bold text-sm sm:text-md lg:text-lg">  {items.title} </h1>
-          <div className="sm:text-sm lg:text-md">
-            {items.content}
+
+          <div className="flex h-full">
+
+            <div className=" flex flex-col justify-center h-full ">
+              <Lottie animationData={items.animation} loop autoplay className="h-20 w-20 sm:h-30 sm:w-30 md:w-40 md:h-40 lg:w-50 lg:h-50" />
+            </div>
+
+            <div className="text-justify text-xs pl-3 flex flex-col justify-center">
+              <h1 className="text-left font-bold text-sm sm:text-md lg:text-lg">  {items.title} </h1>
+              <div className="sm:text-sm lg:text-md">
+                {items.content}
+              </div>
+            </div>
+
           </div>
+
         </div>
-        
-        </div>
-        
-        </div>
-    ))}
-   </div>
+      ))}
+    </div>
+    </div>
+    
   );
 }

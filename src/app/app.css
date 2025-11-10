@@ -94,6 +94,11 @@ body {
   }
 }
 
+.carousel-height {
+  touch-action: pan-y;
+}
+
+
 @media (max-height: 800px) {
   .carousel-display-1 {
     display: none;

@@ -2,7 +2,7 @@
 export default function Tracer({ activeSlide }) {
 
     return (
-        <div className="transition-all duration-500 ease-in-out  flex justify-center space-x-3 ">
+        <div className="transition-all duration-500 ease-in-out  flex justify-center space-x-3 p-2 sm:pl-25 ">
             {[0, 1, 2, 3].map((index) => (
                 <button aria-label="Go"
                     key={index}

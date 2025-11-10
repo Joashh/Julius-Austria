@@ -8,18 +8,26 @@ export default function Showcase() {
 
     return (
 
-        <div className="sm:bg-white/50 backdrop-blur-xs dark:sm:bg-gray-800   p-4 space-y-6 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto bg-transparent  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
+        <div className="backdrop-blur-md shadow-md  space-y-3 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
             {/* Item 1 */}
-            <h1 className='text-sm  text-center text-black dark:text-blue-300 font-bold sm:hidden pt-3'> ACADEMIC BACKGROUND</h1>
-            <div id="ITEM 1" className='max-sm:w-full '>
+            <div className='shadow-md rounded-md bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
+                <h1 className="text-center text-xl md:text-2xl font-bold  text-gray-800 dark:text-blue-300 font-sans">
+                    Academic Background
+                </h1>
+
+                <p className="text-gray-600 dark:text-gray-300 text-center text-sm md:text-base">
+                    A summary of my educational achievements, degrees, and academic recognitions earned throughout my journey.
+                </p>
+            </div>
+
+            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md flex flex-col gap-4'>
+
+           
+            <div id="ITEM 1" className='max-sm:w-full'>
                 <div className="flex items-center gap-4 max-sm:flex-col max-sm:w-full max-md:flex-col sm:flex-row ">
                     {/* Image on the right */}
 
-
-
-
-
-                    <div>
+                    <div >
                         <GlareHover
                             glareColor="#ffffff"
                             glareOpacity={0.3}
@@ -27,9 +35,10 @@ export default function Showcase() {
                             glareSize={300}
                             transitionDuration={800}
                             playOnce={false}
+                            className='shadow-md'
                         >
                             <img
-                                className="rounded-lg min-w-100 w-100 h-100 object-cover max-sm:min-w-0 max-sm:w-full max-sm:h-auto "
+                                className=" rounded-lg min-w-100 w-100 h-100 object-cover max-sm:min-w-0 max-sm:w-full max-sm:h-auto "
                                 src="/images/cpaf3.jpg"
                                 alt="intern"
                             />
@@ -68,21 +77,22 @@ export default function Showcase() {
                     {/* Image on the right */}
                     <div>
                         <GlareHover
-                        glareColor="#ffffff"
-                        glareOpacity={0.3}
-                        glareAngle={-30}
-                        glareSize={300}
-                        transitionDuration={800}
-                        playOnce={false}
-                    >
-                        <img
-                            className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
-                            src="/images/lspu.png"
-                            alt="school"
-                        />
-                    </GlareHover>
+                            glareColor="#ffffff"
+                            glareOpacity={0.3}
+                            glareAngle={-30}
+                            glareSize={300}
+                            transitionDuration={800}
+                            playOnce={false}
+                            className='shadow-md'
+                        >
+                            <img
+                                className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
+                                src="/images/lspu.png"
+                                alt="school"
+                            />
+                        </GlareHover>
                     </div>
-                    
+
                     {/* Description on the left */}
                     <div>
                         <div className="text-2xl font-bold text-blue-800 dark:text-sky-500 pt-1 pl-4  max-sm:h-auto max-sm:max-w-full max-sm:px-0 ">
@@ -120,15 +130,16 @@ export default function Showcase() {
                             glareSize={300}
                             transitionDuration={800}
                             playOnce={false}
+                            className='shadow-md'
                         >
                             <img
-                        className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
-                        src="/images/shs2.png"
-                        alt="school"
-                    />
+                                className="rounded-lg w-100 min-w-100 h-100 object-cover max-sm:h-auto max-sm:max-w-full max-sm:min-w-0  "
+                                src="/images/shs2.png"
+                                alt="school"
+                            />
                         </GlareHover>
                     </div>
-                    
+
 
                     {/* Description on the left */}
                     <div>
@@ -152,6 +163,7 @@ export default function Showcase() {
 
                 </div>
 
+            </div> 
             </div>
         </div>
 

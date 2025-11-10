@@ -54,15 +54,15 @@ export default function Main() {
 
     return (
         <>
-            <div className="h-full flex flex-col pl-4 pr-4  pb-5 min-h-0 bg-transparent">
+            <div className="h-full flex flex-col pl-4 pr-4  pb-5 min-h-0  ">
 
                 <div className="py-2 ">
                     <Tracer activeSlide={currentSlide} />
                 </div>
 
-                <div className="w-full flex gap-4 flex-1 min-h-0 h-full max-sm:flex-col  ">
+                <div className="w-full flex gap-4 flex-1 min-h-0 h-full max-sm:flex-col ">
                     <motion.div
-                        className=" max-sm:rounded-2xl"
+                        className=" max-sm:rounded-2xl "
                         initial={{ opacity: 1 }}
                         animate={{ opacity: showNavigation ? 1 : 0, y: showNavigation ? 0 : 100 }}
                         transition={{ duration: 0.3 }}
@@ -78,7 +78,7 @@ export default function Main() {
 
 
 
-                    <div className="rounded-md scrollbar-custom flex-grow overflow-y-auto w-full h-full min-h-0 max-sm:bg-transparent ">
+                    <div className="rounded-md scrollbar-custom flex-grow overflow-y-auto w-full h-full min-h-0">
                         {currentSlide === 0 &&
                             <motion.div
 

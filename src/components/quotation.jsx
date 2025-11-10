@@ -9,7 +9,7 @@ export default function Quotation() {
     return (
         <div className="flex flex-row items-center w-full gap-4 flex-1 ">
             {/* Column 1: Text */}
-            <div className="transition-all duration-500 ease-in-out flex flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-white/50 backdrop-blur-xs shadow-2xl dark:bg-gray-800 rounded-md justify-center  ">
+            <div className="transition-all duration-500 ease-in-out flex flex-1 flex-col  pr-4 min-h-32 max-h-32 h-32 bg-white backdrop-blur-xs shadow-md dark:bg-gray-800 rounded-md justify-center  ">
                 <div className='text-black dark:text-blue-200 text-left leading-relaxed pl-4  font-semibold  sm:text-xs  '>
                 <TypeAnimation
                 className='text-sm md:text-lg lg:text-xl text-justify max-sm:font-light  sm:font-bold   md:font-bold'
@@ -29,7 +29,7 @@ export default function Quotation() {
             </div>
 
             {/* Column 2: Icons */}
-            <div className="transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-4 min-h-32 max-h-32 bg-white/50 shadow-2xl dark:bg-gray-800 rounded-md max-w-15 w-full">
+            <div className="transition-all duration-500 ease-in-out flex flex-col items-center justify-center space-y-4 min-h-32 max-h-32 bg-white shadow-md dark:bg-gray-800 rounded-md max-w-15 w-full">
                 <a href="https://www.facebook.com" target="_blank" title="Facebook" rel="noopener noreferrer">
                     <FaFacebook className="h-6 w-6 text-blue-600 hover:text-blue-700" />
                 </a>
