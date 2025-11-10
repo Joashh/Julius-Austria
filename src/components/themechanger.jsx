@@ -30,9 +30,9 @@ export default function ThemeChanger() {
     transition={{ type: "spring", stiffness: 300, damping: 20 }}
   >
     {theme === "light" ? (
-      <CgDarkMode className="h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500" />
+      <CgDarkMode className="h-6 w-6 md:h-7 md:w-7 text-white md:text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500" />
     ) : (
-      <CgDarkMode className="h-7 w-7 dark:text-amber-400 hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500" />
+      <CgDarkMode className="h-6 w-6 md:h-7 md:w-7 dark:text-amber-400 hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500" />
     )}
   </motion.div>
 </li>

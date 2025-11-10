@@ -10,7 +10,7 @@ import BlurText from '@/components/BlurText.jsx';
 import Aurora from '@/components/Aurora.jsx';
 import { AiOutlineShareAlt } from "react-icons/ai"
 import ThemeChanger from '@/components/themechanger.jsx';
-
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid"
 
 export default function Home2() {
     const { theme } = useContext(themecontext);
@@ -41,7 +41,7 @@ export default function Home2() {
 
 
                         <div className='flex flex-col items-center sm:flex-row sm:bg-white/40 sm:dark:bg-blue-950/30 sm:shadow-md backdrop-blur-xs p-7 rounded-xl'>
-                            <div className="absolute top-4 right-4 z-20">
+                            <div className="absolute top-4 right-4 z-20 hidden md:block">
                                 <ThemeChanger />
                             </div>
 
@@ -95,8 +95,12 @@ export default function Home2() {
                                         View Portfolio
                                     </button>
                                     <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
-                                        <button className="cursor-pointer text-white font-sans bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
-                                            Download Resume
+                                        <button className="flex items-center gap-2 text-white font-sans bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:px-3 hover:bg-gray-600 active:bg-gray-800">
+                                            {/* Icon visible on all screens */}
+                                            <ArrowDownTrayIcon className="h-5 w-5 text-white" />
+
+                                            {/* Text hidden on small screens */}
+                                            <span className="hidden sm:inline">Download Resume</span>
                                         </button>
                                     </a>
 
@@ -115,6 +119,10 @@ export default function Home2() {
                                     >
                                         <AiOutlineShareAlt className="w-5 h-5" />
                                     </button>
+
+                                    <div className="flex md:hidden cursor-pointer items-center justify-center text-white bg-gray-700 rounded-md shadow-lg h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
+                                        <ThemeChanger />
+                                    </div>
                                 </div>
                             </div>
                         </div>

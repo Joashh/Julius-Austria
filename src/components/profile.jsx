@@ -8,7 +8,7 @@ import BlurText from '@/components/BlurText.jsx';
 import Aurora from '@/components/Aurora.jsx';
 import { AiOutlineShareAlt } from "react-icons/ai"
 import ThemeChanger from '@/components/themechanger.jsx';
-
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid"
 export default function Profile() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { theme } = useContext(themecontext);
@@ -64,9 +64,9 @@ export default function Profile() {
               <div className="relative z-10 flex items-center justify-center rounded-lg p-10 shadow-md  w-screen min-h-screen max-sm:flex-col ">
 
                 <div className='flex flex-col items-center sm:flex-row sm:bg-white/40 sm:dark:bg-blue-950/30 sm:shadow-md backdrop-blur-xs p-7 rounded-xl'>
-                  <div className="absolute top-4 right-4 z-20">
-                                                  <ThemeChanger />
-                                              </div>
+                  <div className="absolute top-4 right-4 z-20 hidden md:block">
+                    <ThemeChanger />
+                  </div>
                   <img
                     className="h-60 w-60 rounded-full shadow-[0_0_10px_#00f0ff] hover:shadow-[0_0_20px_#00f0ff] transition-shadow duration-300 max-sm:w-30 max-sm:h-auto"
                     src="/images/testprof.jpeg"
@@ -116,8 +116,12 @@ export default function Profile() {
                         View Portfolio
                       </button>
                       <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
-                        <button className="cursor-pointer text-white font-sans bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
-                          Download Resume
+                        <button className="flex items-center gap-2 text-white font-sans bg-gray-700 rounded-md shadow-lg h-10 px-5 font-medium max-sm:px-3 hover:bg-gray-600 active:bg-gray-800">
+                          {/* Icon visible on all screens */}
+                          <ArrowDownTrayIcon className="h-5 w-5 text-white" />
+
+                          {/* Text hidden on small screens */}
+                          <span className="hidden sm:inline">Download Resume</span>
                         </button>
                       </a>
 
@@ -136,6 +140,10 @@ export default function Profile() {
                       >
                         <AiOutlineShareAlt className="w-5 h-5" />
                       </button>
+
+                      <div className="flex md:hidden cursor-pointer items-center justify-center text-white bg-gray-700 rounded-md shadow-lg h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800">
+                        <ThemeChanger />
+                      </div>
                     </div>
                   </div>
                 </div>
