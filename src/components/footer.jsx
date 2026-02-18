@@ -1,17 +1,30 @@
-import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare, FaInbox } from 'react-icons/fa';
+import { useEffect, useState } from "react";
+import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare } from "react-icons/fa";
+import { ref, onValue } from "firebase/database";
+import { database } from "@/app/firebase";
+import { FaEye } from "react-icons/fa";
 
 export default function Footer() {
+  const [visits, setVisits] = useState(0);
+
+  useEffect(() => {
+    const visitsRef = ref(database, "visits");
+    onValue(visitsRef, (snapshot) => {
+      setVisits(snapshot.val() || 0);
+    });
+  }, []);
+
   return (
-    <footer className="bg-white dark:bg-gray-800 w-full  text-gray-300 py-3  text-center ">
-      <div className="max-w-xl mx-auto ">
-        <h2 className="text-md font-semibold text-blue-800 dark:text-blue-300 ">CONNECT WITH ME</h2>
+    <footer className="bg-white dark:bg-gray-800 w-full text-gray-300 py-3 text-center">
+      <div className="max-w-xl mx-auto">
+        <h2 className="text-md font-semibold text-blue-800 dark:text-blue-300">CONNECT WITH ME</h2>
         
         <div className="flex pt-1 text-xs px-2 text-black dark:text-white">
           Feel free to reach out anytime — I’m always open to new projects, collaborations, and opportunities.
-Connect with me on LinkedIn or Instagram, or just drop me an email!
-          </div>
+          Connect with me on LinkedIn or Instagram, or just drop me an email!
+        </div>
 
-        <div className="flex flex-row justify-center gap-x-5    pt-5  text-sm">
+        <div className="flex flex-row justify-center gap-x-5 pt-5 text-sm">
           
           <div className="flex items-center justify-center gap-2">
             <FaLinkedin className="text-black dark:text-white" />
@@ -36,7 +49,15 @@ Connect with me on LinkedIn or Instagram, or just drop me an email!
 
         </div>
 
-        <p className="text-xs text-gray-800 dark:text-gray-500 mt-6 ">&copy; {new Date().getFullYear()} Julius Austria. All rights reserved.</p>
+        {/* Visitor count */}
+        <p className="text-xs mt-3 text-gray-400 flex items-center justify-center gap-1">
+          <FaEye className="text-gray-400 dark:text-gray-500" />
+          <span>{visits}</span>
+        </p>
+
+        <p className="text-xs text-gray-800 dark:text-gray-500 mt-3">
+          &copy; {new Date().getFullYear()} Julius Austria. All rights reserved.
+        </p>
       </div>
     </footer>
   );
