@@ -130,8 +130,9 @@ export default function Home2() {
                     </div>
                 </div>
             ) : (
+                <>
                 <div
-                    className="flex flex-col h-screen max-sm:h-auto transition-all duration-500 ease-in-out bg-gray-200 dark:bg-gray-900"
+                    className="flex flex-col p-6 md:p-10 xl:p-10 xl:pt-6 xl:pb-0  pb-0 justify-center  max-sm:h-auto transition-all duration-500 ease-in-out bg-gray-100 dark:bg-gray-900"
                     data-theme={theme || "light"}
                     style={{
                         backgroundImage: theme === "light" ? '' : "none",
@@ -147,9 +148,9 @@ export default function Home2() {
                         <Header />
                     </motion.div>
 
-                    <div className="flex flex-1 min-h-0 h-full">
+                    <div className="flex flex-col ">
                         <motion.main
-                            className="flex-1 overflow-y-auto min-h-0 h-full"
+                            className=" min-h-0 h-full"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -158,8 +159,14 @@ export default function Home2() {
                             <Main />
                         </motion.main>
                     </div>
+                        
+                </div>
+                <div>
                     <Footer />
                 </div>
+                </>
+
+                
             )}
         </>
     );

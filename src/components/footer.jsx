@@ -2,7 +2,7 @@ import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare, FaInbox } from 'react-ico
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-800 text-gray-300 py-3  text-center max-sm:block md:hidden sm:hidden">
+    <footer className="bg-white dark:bg-gray-800 w-full  text-gray-300 py-3  text-center ">
       <div className="max-w-xl mx-auto ">
         <h2 className="text-md font-semibold text-blue-800 dark:text-blue-300 ">CONNECT WITH ME</h2>
         

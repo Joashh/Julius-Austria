@@ -8,7 +8,8 @@ import BlurText from '@/components/BlurText.jsx';
 import Aurora from '@/components/Aurora.jsx';
 import { AiOutlineShareAlt } from "react-icons/ai"
 import ThemeChanger from '@/components/themechanger.jsx';
-import { ArrowDownTrayIcon } from "@heroicons/react/24/solid"
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 export default function Profile() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { theme } = useContext(themecontext);
@@ -18,32 +19,70 @@ export default function Profile() {
       <div
 
         className={`transition-all duration-500 ease-in-out 
-          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-100 dark:bg-gray-900" : "min-h-32 max-h-32  bg-white shadow-md dark:bg-gray-800 rounded-md p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 flex flex-col gap-2 overflow-hidden max-sm:max-h-200 max-sm:p-5  max-sm:justify-center "}
+          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-100 dark:bg-gray-900" : "  bg-gray-100  dark:bg-gray-800 rounded-md sm:flex-row sm:items-center flex flex-col gap-2  "}
         `}
         data-theme={theme || "light"}>
 
         {!isExpanded ? (
-          <div className="max-sm:flex-col flex  ">
+          <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:px-20 rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
+            {/* Profile Image */}
             <img
-              className="mx-auto block h-24 w-24 rounded-full sm:mx-0 sm:shrink-0 cursor-pointer max-sm:items-center"
+              className="h-40 w-40 rounded-full object-cover cursor-pointer ring-4 ring-blue-500/20 hover:scale-105 transition"
               src="../images/testprof.jpeg"
-              alt=""
+              alt="Profile"
               onClick={() => setIsExpanded(!isExpanded)}
             />
-            <div className="space-y-2 text-center pl-5 sm:text-left cursor-pointer max-sm:text-left  max-sm:space-y-0 max-sm:justify-center max-sm:flex max-sm:pl-0" onClick={() => setIsExpanded(!isExpanded)}>
-              <div className="space-y-0.5 max-sm:space-y-0  max-sm:flex max-sm:flex-col max-sm:items-center max-sm:pt-3 ">
-                <p className="text-lg font-semibold text-black dark:text-white max-sm:text-2xl ">Julius Asher P. Austria</p>
-                <p className="font-medium text-gray-500 dark:text-gray-500 text-md max-sm:text-lg ">Computer Science Degree</p>
-                <a
-                  href="https://github.com/Joashh"
-                  className="border-purple-200 text-blue-800 dark:text-blue-400 hover:border-transparent max-md:text-xs hover:text-white max-sm:hidden "
-                >
-                  Github
-                </a>
+
+            {/* Content */}
+            <div
+              className="flex-1 space-y-3 text-center sm:text-left cursor-pointer"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                  <p className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                    Julius Asher P. Austria
+                  </p>
+                  <TypeAnimation
+                className='text-sm text-gray-600 dark:text-gray-400 md:text-lg lg:text-xl text-center xl:text-justify max-sm:font-light  sm:font-bold   md:font-medium'
+                    sequence={[ "Software Developer | Researcher | Computer Science",
+                              1000, // optional pause at end
+                    ]}
+                    speed={50}
+                    wrapper="h1"
+                
+                    repeat={0}
+                />
+                </div>
+
+                {/* Socials */}
+                <div className="flex gap-4 justify-center sm:justify-end">
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className="h-6 w-6 text-blue-600 hover:scale-110 transition" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/julius-asher-p-austria-889473333/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedinIn className="h-6 w-6 text-blue-400 hover:scale-110 transition" />
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="h-6 w-6 text-pink-500 hover:scale-110 transition" />
+                  </a>
+                </div>
               </div>
 
+              <div className="h-px w-full bg-gray-200 dark:bg-gray-700" />
+
+              {/* Bio */}
+              <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-xs sm:text-base md:text-lg text-center sm:text-justify">
+                Hi! I'm a developer and programmer with a passion for Intelligent Systems.
+                I've had the privilege of working on impactful projects and would love to
+                share my achievements so far.
+              </p>
+
+             
             </div>
           </div>
+
         ) : (
           <>
             <div

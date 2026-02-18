@@ -101,10 +101,10 @@ export default function Album() {
 
 
     return (
-        <div className=" w-full min-h-screen flex flex-col items-center justify-center md:px-4 gap-4 pb-2">
+        <div className=" w-full min-h-screen flex flex-col items-center justify-center  gap-4 pb-2">
 
 
-            <div className='shadow-md rounded-md bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
+            <div className='shadow-md rounded-xl bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2 md:hidden'>
                 <h1 className="text-center text-xl md:text-2xl font-bold  text-gray-800 dark:text-blue-300 font-sans">
                     Certificates and Awards
                 </h1>
@@ -115,7 +115,7 @@ export default function Album() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full ">
                 {certificates.map((cert, index) => (
                     <div
                         key={index}

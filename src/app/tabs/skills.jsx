@@ -81,7 +81,7 @@ const skillCards = [
 export default function Skills() {
   return (
     <div className="w-full h-full flex flex-col gap-4">
-      <div className='shadow-md rounded-md bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
+      <div className='md:hidden shadow-md rounded-xl bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
                 <h1 className="text-center text-xl md:text-2xl font-bold  text-gray-800 dark:text-blue-300 font-sans">
                     Skills and Experience
                 </h1>
@@ -95,7 +95,7 @@ export default function Skills() {
       
       {skillCards.map((items, index) =>
       (
-        <div key={index} className="bg-white dark:bg-cyan-900 rounded-lg shadow-md border-2 border-transparent hover:bg-transparent hover:border-1 hover:border-gray-400 transition-all duration-200 ease-in-out p-4 ">
+        <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-md border-2 border-transparent hover:bg-transparent hover:border-1 hover:border-gray-400 transition-all duration-200 ease-in-out p-4 ">
 
 
           <div className="flex h-full">

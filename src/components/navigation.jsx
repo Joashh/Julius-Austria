@@ -4,7 +4,9 @@ import { CgDarkMode } from "react-icons/cg";
 import React, { useState, useContext, useEffect } from 'react';
 import { themecontext } from "@/app/themecontext";
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
+import { AiOutlineShareAlt } from "react-icons/ai"
+import { FaGithub } from "react-icons/fa";
 
 export default function Navigation({ goToSlide, currentProject, setCurrentProject, scrollDirection }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,6 +47,9 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+      if (['ArrowDown', 'ArrowUp'].includes(event.key)) {
+        event.preventDefault();
+      }
       if (event.key === 'ArrowDown') {
         handleNext();
       }
@@ -52,6 +57,8 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
         handlePrev();
       }
     };
+
+
 
     window.addEventListener('keydown', handleKeyDown);
 
@@ -65,7 +72,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
 
     <>
 
-      <div className='h-full  flex flex-col  ' data-theme={theme || "light"}>
+      <div className='h-full flex py-4 gap-4 ' data-theme={theme || "light"}>
         <AnimatePresence>
 
           <motion.nav
@@ -73,29 +80,37 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="transition-all duration-500 ease-in-out bg-white shadow-md dark:bg-gray-800 p-0  w-20   max-sm:backdrop-blur-xs  max-sm:w-full max-sm:h-auto rounded-xl">
-            <div className="flex flex-row  items-center justify-center h-auto max-sm:w-full ">
+            className="flex w-full  md:w-2/3 transition-all duration-500 ease-in-out   bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
+            <div className="flex  items-center  h-auto w-full ">
 
-              <ul className="flex flex-col space-y-8 cursor-pointer py-4 max-sm:flex-row  max-sm:gap-x-10 max-sm:w-full max-sm:justify-center  max-sm:h-auto max-sm:py-3 max-sm:space-y-0">
-                <li className="flex items-center">
+              <ul className="flex gap-auto px-6 md:gap-4 xl:gap-10 justify-between w-full items-center md:justify-center  ease-in-out duration-100  ">
+                <li className="flex flex-col gap-1  items-center cursor-pointer">
                   <BuildingOffice2Icon className={clickstate === 0 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('showcase'); toggleVisibility(false); setclickstate(0); }} />
+                  <h1 className="
+  hidden md:block 
+  text-sm font-semibold text-gray-400 text-center
+  whitespace-nowrap overflow-hidden text-ellipsis
+  w-full min-w-0
+">
+                    Academic Background
+                  </h1>
                 </li>
-                <li className="flex items-center">
+                <li className="flex flex-col gap-1  items-center cursor-pointer">
 
                   <TrophyIcon className={clickstate === 1 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('certifications'); toggleVisibility(false); setclickstate(1); }} />
-
+                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Achievements</h1>
                 </li>
-                <li className="flex items-center">
+                <li className="flex flex-col gap-1  items-center cursor-pointer">
 
                   <BoltIcon className={clickstate === 2 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('skills'); toggleVisibility(false); setclickstate(2); }} />
-
+                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Skills & Experience</h1>
                 </li>
-                <li className="flex items-center">
+                <li className="flex flex-col gap-1 items-center cursor-pointer">
 
                   <ComputerDesktopIcon className={clickstate === 3 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('projects'); toggleVisibility(true); setclickstate(3); }} />
-
+                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Projects & Works</h1>
                 </li>
-                <li className="flex items-center" onClick={toggleTheme}>
+                <li className="flex items-center gap-1  flex-col cursor-pointer" onClick={toggleTheme}>
 
                   <motion.div
                     whileTap={{ rotate: 360, scale: 0.8 }}
@@ -107,7 +122,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
                       <CgDarkMode className="h-7 w-7 dark:text-amber-400 hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500" />
                     )}
                   </motion.div>
-
+                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Toggle Theme</h1>
 
                 </li>
               </ul>
@@ -120,7 +135,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
           {isVisible && (
 
             <motion.div
-              className="flex flex-col items-center justify-center mt-auto gap-3 pb-5  max-md:hidden  "
+              className="hidden flex-col items-center justify-center mt-auto gap-3 pb-5   max-md:hidden  "
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -50 }}
@@ -145,6 +160,62 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
             </motion.div>
           )}
         </AnimatePresence>
+
+        <motion.nav
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="hidden  transition-all duration-500 ease-in-out flex-1 sm:flex  gap-4 justify-center items-center bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
+
+
+
+          <a
+            href="https://github.com/Joashh"
+            className="cursor-pointer gap-2 text-sm flex items-center justify-center text-white bg-gray-700 rounded-md  h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
+          >
+            <FaGithub />
+            <span className=' hidden lg:block
+      text-xs xl:text-sm 
+      truncate max-w-full'>Visit GitHub</span>
+
+          </a>
+
+          <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
+            <button className="
+    flex items-center gap-2 cursor-pointer font-sans font-medium
+    bg-gray-700 text-white rounded-md h-10 px-4 max-sm:px-3
+    hover:bg-gray-600 active:bg-gray-800
+    
+  ">
+              <ArrowDownTrayIcon className="h-5 w-5 text-white shrink-0" />
+
+              <span className="
+      hidden lg:block
+      text-xs xl:text-sm 
+    ">
+                Download Resume
+              </span>
+            </button>
+          </a>
+
+
+          <button
+            className="cursor-pointer flex items-center justify-center text-white bg-gray-700 rounded-md  h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
+            title="Copy Portfolio Link"
+            onClick={() => {
+              const link = "https://juliusasheraustria.vercel.app/";
+              if (navigator.clipboard) {
+                navigator.clipboard.writeText(link);
+                alert("Portfolio link copied!");
+              } else {
+                prompt("Copy this link:", link);
+              }
+            }}
+          >
+            <AiOutlineShareAlt className="w-5 h-5" />
+          </button>
+        </motion.nav>
       </div>
     </>
   );

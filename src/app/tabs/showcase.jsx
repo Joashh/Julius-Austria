@@ -8,19 +8,10 @@ export default function Showcase() {
 
     return (
 
-        <div className="backdrop-blur-md shadow-md  space-y-3 max-h-full min-h-0 flex flex-col flex-1 overflow-y-auto  max-sm:w-full  max-sm:py-0 max-sm:px-0 max-sm:space-y-3">
-            {/* Item 1 */}
-            <div className='shadow-md rounded-md bg-white dark:bg-gray-800 flex flex-col justify-center p-4 w-full gap-2'>
-                <h1 className="text-center text-xl md:text-2xl font-bold  text-gray-800 dark:text-blue-300 font-sans">
-                    Academic Background
-                </h1>
+        <div className="backdrop-blur-md shadow-md   flex flex-col flex-1   max-sm:w-full  max-sm:py-0 max-sm:px-0">
+            
 
-                <p className="text-gray-600 dark:text-gray-300 text-center text-sm md:text-base">
-                    A summary of my educational achievements, degrees, and academic recognitions earned throughout my journey.
-                </p>
-            </div>
-
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md flex flex-col gap-4'>
+            <div className='bg-white dark:bg-gray-800 p-6 rounded-b-md shadow-md flex flex-col gap-6'>
 
            
             <div id="ITEM 1" className='max-sm:w-full'>

@@ -54,13 +54,8 @@ export default function Main() {
 
     return (
         <>
-            <div className="h-full flex flex-col pl-4 pr-4  pb-5 min-h-0  ">
-
-                <div className="py-2 ">
-                    <Tracer activeSlide={currentSlide} />
-                </div>
-
-                <div className="w-full flex gap-4 flex-1 min-h-0 h-full max-sm:flex-col ">
+            <div className="h-full flex flex-col min-h-0  ">
+                <div className="w-full flex flex-col justify-center   min-h-0 h-full  ">
                     <motion.div
                         className=" max-sm:rounded-2xl "
                         initial={{ opacity: 1 }}
@@ -78,7 +73,7 @@ export default function Main() {
 
 
 
-                    <div className="rounded-md scrollbar-custom flex-grow overflow-y-auto w-full h-full min-h-0">
+                    <div className="rounded-md scrollbar-custom flex-grow overflow-y-auto  min-h-0">
                         {currentSlide === 0 &&
                             <motion.div
 
@@ -116,7 +111,7 @@ export default function Main() {
                         }
                         {currentSlide === 3 &&
                             <motion.div
-                                className="h-full"
+                                className=""
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
@@ -128,7 +123,13 @@ export default function Main() {
                     </div>
 
                     <div className="md:hidden fixed bottom-4 right-4 z-50">
-                        
+
+
+
+                    </div>
+
+                    <div className="py-2 ">
+                        <Tracer activeSlide={currentSlide} />
                     </div>
                 </div>
             </div>
