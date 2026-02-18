@@ -1,8 +1,8 @@
-"use client"; // MUST be at the top
+"use client";
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { database } from "@/app/firebase"; // path to your firebase.js
+import { database } from "@/app/firebase";
 import { ref, runTransaction } from "firebase/database";
 
 export default function VisitorTracker() {
@@ -10,13 +10,16 @@ export default function VisitorTracker() {
 
   useEffect(() => {
     const incrementVisits = () => {
-      const visitsRef = ref(database, "visits");
-      runTransaction(visitsRef, (current) => (current || 0) + 1);
-      console.log("Visitor added");
+      try {
+        const visitsRef = ref(database, "visits");
+        runTransaction(visitsRef, (current) => (current || 0) + 1);
+      } catch (error) {
+        console.error("Firebase visit increment failed:", error);
+      }
     };
 
     incrementVisits();
   }, [pathname]);
 
-  return null; // no UI needed
+  return null;
 }
