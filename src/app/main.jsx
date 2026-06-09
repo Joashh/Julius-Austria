@@ -128,8 +128,8 @@ export default function Main() {
 
                     </div>
 
-                    <div className="py-2 ">
-                        <Tracer activeSlide={currentSlide} />
+                    <div className="py-4 ">
+                      
                     </div>
                 </div>
             </div>

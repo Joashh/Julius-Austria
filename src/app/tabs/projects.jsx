@@ -2,8 +2,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDownCircleIcon, ArrowUpCircleIcon } from '@heroicons/react/24/solid';
 import { useRef, useState, useEffect } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaCross, FaGithub } from "react-icons/fa";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import { MdExitToApp } from "react-icons/md";
+import { X } from "lucide-react";
 
 
 export default function Projects({ currentProject, setCurrentProject }) {
@@ -117,7 +119,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
 
   // Track if screen is small (max-sm)
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
+  const [selectedProject, setSelectedProject] = useState(null);
   useEffect(() => {
     function checkScreen() {
       setIsSmallScreen(window.matchMedia("(max-width: 640px)").matches);
@@ -145,90 +147,219 @@ export default function Projects({ currentProject, setCurrentProject }) {
   const variants = isSmallScreen ? fadeVariants : slideVariants;
 
   return (
-    <div className="w-full  flex flex-col gap-6">
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="flex flex-col md:flex-row bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
-        >
-          {/* Left: Project image */}
-          <div className="md:w-1/3 w-full h-48 md:h-auto flex-shrink-0">
-
-            <img
-              src={project.image}
-              alt={`project-${index}`}
-              className="w-full h-full object-cover rounded-t-xl md:rounded-t-none md:rounded-l-xl"
-            />
-          </div>
-
-          {/* Right: Project content */}
-          <div className="md:w-2/3 w-full p-6 flex flex-col gap-2 justify-between flex-1">
-            {/* Title with underline */}
-            <div>
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white border-b-1 border-gray-700 pb-1">
-                {project.title}
-              </h2>
-
-              {/* Year & Month */}
-              <span className="flex gap-3 pt-4 items-center text-gray-500 dark:text-gray-400 text-sm ">
-                <span>{project.Date} - </span>
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gray-200 dark:bg-gray-800 text-black dark:text-white text-xs font-semibold py-1 px-2 rounded-full">
-                    {project.techstack}
-                  </span>
-                </div>
-              </span>
+    <>
 
 
+      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 ">
+        {projects.map((project, index) => (
+          <article
+            key={index}
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white dark:bg-gray-900 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+          >
+            {/* Image */}
+            <div className="relative h-72 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+              />
 
-              {/* Description */}
-              <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base line-clamp-5 mt-2">
-                {project.description}
-              </p>
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              {/* Date */}
+              <div className="absolute top-4 right-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs text-white">
+                {project.Date}
+              </div>
+
+              {/* Tech Stack */}
+              <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+                <span className="rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 text-xs text-white">
+                  {project.techstack}
+                </span>
+              </div>
             </div>
 
+            {/* Content */}
+            <div className="space-y-5 p-6">
+              <div>
+                <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {project.title}
+                </h2>
 
-            <div>
-              <div className="flex flex-wrap gap-2 mt-3  ">
-                {project.documentationLink && (
-                  <button
-                    className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-blue-500 dark:bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg shadow hover:bg-blue-600 dark:hover:bg-blue-700 transition"
-                    onClick={() => window.open(project.documentationLink, "_blank")}
-                  >
-                    <FaBookOpen className="w-4 h-4" />
-                    Docs
-                  </button>
-                )}
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  {project.description}
+                </p>
+              </div>
 
-                {project.githubLink && (
-                  <button
-                    className="flex-1 md:flex-none flex cursor-pointer items-center justify-center gap-2 bg-gray-200 dark:bg-gray-700 text-black dark:text-white text-sm font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-300 dark:hover:bg-gray-700 transition"
-                    onClick={() => window.open(project.githubLink, "_blank")}
-                  >
-                    <FaGithub className="w-4 h-4" />
-                    GitHub
-                  </button>
-                )}
+              {/* Actions */}
+              <div className="flex items-center  justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
+                <div className="flex gap-2">
+                  {project.githubLink && (
+                    <button
+                      onClick={() =>
+                        window.open(project.githubLink, "_blank")
+                      }
+                      className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100 transition hover:scale-105 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <FaGithub />
+                    </button>
+                  )}
+
+                  {project.documentationLink && (
+                    <button
+                      onClick={() =>
+                        window.open(
+                          project.documentationLink,
+                          "_blank"
+                        )
+                      }
+                      className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100 transition hover:scale-105 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <FaBookOpen />
+                    </button>
+                  )}
+                </div>
 
                 <button
-                  className="flex-1 md:flex-none flex items-center justify-center gap-2 bg-gray-800 dark:bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-700 dark:hover:bg-blue-800 cursor-pointer transition"
-                  onClick={() => {
-                    navigator.clipboard.writeText(project.link || window.location.href);
-                    alert("Project link copied!");
-                  }}
+                  onClick={() => setSelectedProject(project)}
+                  className="rounded-xl z-50 cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:shadow-lg hover:shadow-blue-500/30"
                 >
-                  <AiOutlineShareAlt className="w-4 h-4" />
-                  Share
+                  View Project →
                 </button>
               </div>
             </div>
 
+            {/* Hover Glow */}
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl" />
+            </div>
+          </article>
+
+
+        ))}
+      </div>
+
+      {selectedProject && (
+
+        <motion.div
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 10, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl dark:bg-gray-900"
+          >
+            {/* MAIN LAYOUT */}
+            <div className="flex max-h-[90vh] flex-col">
+
+              {/* IMAGE HEADER (fixed height, no scroll) */}
+              <div className="relative h-64 md:h-80 w-full shrink-0 overflow-hidden">
+                <img
+                  src={selectedProject.image ?? ""}
+                  alt={selectedProject.title}
+                  className="h-full w-full object-cover scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-4 right-4 rounded-full bg-black/40 p-2 text-white backdrop-blur hover:bg-black/60 transition"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+
+              {/* SCROLLABLE AREA ONLY */}
+              <div className="flex-1 overflow-y-auto">
+
+                {/* HEADER */}
+                <div className="px-6 md:px-8 pt-6 pb-4 border-b border-gray-200 dark:border-gray-800">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                    {selectedProject.title}
+                  </h2>
+
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {selectedProject.Date}
+                  </p>
+                </div>
+
+                {/* CONTENT */}
+                <div className="px-6 md:px-8 py-6 space-y-8">
+
+                  {/* About */}
+                  <section>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                      About the Project
+                    </h3>
+                    <p className="leading-relaxed text-gray-600 dark:text-gray-300">
+                      {selectedProject.description}
+                    </p>
+                  </section>
+
+                  {/* Tech Stack */}
+                  <section>
+                    <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                      Technology Stack
+                    </h3>
+
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.techstack.split(",").map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-200"
+                        >
+                          {tech.trim()}
+                        </span>
+                      ))}
+                    </div>
+                  </section>
+
+                  {/* Actions */}
+                  <section className="flex flex-wrap gap-3 pt-2">
+                    {selectedProject.githubLink && (
+                      <button
+                        onClick={() => window.open(selectedProject.githubLink, "_blank")}
+                        className="flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                      >
+                        <FaGithub />
+                        Source Code
+                      </button>
+                    )}
+
+                    {selectedProject.documentationLink && (
+                      <button
+                        onClick={() =>
+                          window.open(selectedProject.documentationLink, "_blank")
+                        }
+                        className="flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                      >
+                        <FaBookOpen />
+                        Documentation
+                      </button>
+                    )}
+
+                    <button
+                      onClick={() =>
+                        navigator.clipboard.writeText(selectedProject.link)
+                      }
+                      className="rounded-xl bg-black px-5 py-3 text-white dark:bg-white dark:text-black hover:opacity-90 transition"
+                    >
+                      Share Project
+                    </button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-
-
+        </motion.div>
+      )}
+    </>
   );
 }
