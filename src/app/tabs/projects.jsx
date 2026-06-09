@@ -9,13 +9,22 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 export default function Projects({ currentProject, setCurrentProject }) {
   const projects = [
     {
+      image: "images/golakelab.png",
+      title: "GoLAKELab Website",
+      description:
+        "Been part of the GoLakeLab project. A research project funded by DOST and was assigned to develop their website and responsible for populating the data for some lakes. Responsible for leading the website development project. Collaborating with teams. The website utilized wordpress as backend and some PHP and CSS codes for the frontend.",
+      githubLink: "https://golakelab.dev.uplb.edu.ph/",
+      techstack: "Wordpress | NextJS",
+      Date: "February 2026"
+    },
+    {
       image: "images/al.png",
       title: "Al Benavente's Portfolio",
       description:
         "I developed a photography portfolio website that showcases high-quality images in a visually engaging layout. The website highlights different photo collections and provides detailed information about the photographer and services offered.",
       githubLink: "albenavente.com",
-     techstack: "GoDaddy | NextJS",
-     Date: "January 2026"
+      techstack: "GoDaddy | NextJS",
+      Date: "January 2026"
     },
     {
       image: "images/dysg.png",
@@ -23,8 +32,8 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description:
         "I developed and trained a model that can detect potential dysgraphia using handwriting as input. The model assesses features such as stroke patterns, character recognition, and letter alignment. It was created using PyTesseract and other machine learning techniques.",
       githubLink: "https://github.com/Joashh/Dysgraphia-Detection-Prototype-Python-Pycharm-Project?tab=readme-ov-file",
-     techstack: "Open CV | Pytesseract | Streamlit",
-     Date: "February 2023"
+      techstack: "Open CV | Pytesseract | Streamlit",
+      Date: "February 2023"
     },
     {
       image: "images/pandc.png",
@@ -32,8 +41,8 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description:
         "I developed a commissioned wedding website that showcases event photos, digital invitations, and detailed wedding information. The platform includes an RSVP system that allows guests to confirm attendance online, making event coordination more efficient.",
       githubLink: "pandc.vercel.app",
-     techstack: "Vercel | NextJS | Github",
-     Date: "August 2025"
+      techstack: "Vercel | NextJS | Github",
+      Date: "August 2025"
     },
     {
       image: "images/cpaflight.png",
@@ -41,7 +50,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description: "I created a web-based intranet system using Filament in Laravel. The system is designed to manage the college's documents such as researchers, training organizes, awards, and other important documents.",
       githubLink: "https://github.com/Joashh/laravel-cpaf",
       techstack: "Laravel | Filament PHP | Tailwind CSS | MySQL | Node JS",
-       Date: "September 2025"
+      Date: "September 2025"
     },
     {
       image: "images/robot.jpg",
@@ -49,7 +58,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description: "I developed a robot that can follow a line using Arduino. The robot uses a machine learning technique that classify its movement. The project was created using Arduino IDE and C++ programming language with the help of ESP Wifi Module.",
       githubLink: "https://github.com/Joashh/-Robot-Line-Follower?tab=readme-ov-file",
       techstack: "Python | ESP8266 | Arduino UNO | C++ ",
-       Date: "March 2025"
+      Date: "March 2025"
     },
     {
       image: "images/appdev.png",
@@ -57,7 +66,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
       description: "This application is an Android educational game built with Android Studio, designed to help children develop cognitive skills through interactive quizzes that adapt in real time.  The game syncs data with a local backend using XAMPP for storage and tracking.",
       githubLink: "https://github.com/Joashh/Adaptive-Game-Mobile-Application",
       techstack: "Android Studio | JSON | XML",
-       Date: "November 2024"
+      Date: "November 2024"
     },
     {
       image: "images/proj1.png",
@@ -144,7 +153,7 @@ export default function Projects({ currentProject, setCurrentProject }) {
         >
           {/* Left: Project image */}
           <div className="md:w-1/3 w-full h-48 md:h-auto flex-shrink-0">
-          
+
             <img
               src={project.image}
               alt={`project-${index}`}

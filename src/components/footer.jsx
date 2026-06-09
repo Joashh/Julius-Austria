@@ -1,18 +1,11 @@
 import { useEffect, useState } from "react";
 import { FaLinkedin, FaEnvelopeSquare, FaGithubSquare } from "react-icons/fa";
 import { ref, onValue } from "firebase/database";
-import { database } from "@/app/firebase";
+
 import { FaEye } from "react-icons/fa";
 
 export default function Footer() {
-  const [visits, setVisits] = useState(0);
-
-  useEffect(() => {
-    const visitsRef = ref(database, "visits");
-    onValue(visitsRef, (snapshot) => {
-      setVisits(snapshot.val() || 0);
-    });
-  }, []);
+ 
 
   return (
     <footer className="bg-white dark:bg-gray-800 w-full text-gray-300 py-3 text-center">
@@ -49,11 +42,7 @@ export default function Footer() {
 
         </div>
 
-        {/* Visitor count */}
-        <p className="text-xs mt-3 text-gray-400 flex items-center justify-center gap-1">
-          <FaEye className="text-gray-400 dark:text-gray-500" />
-          <span>{visits}</span>
-        </p>
+        
 
         <p className="text-xs text-gray-800 dark:text-gray-500 mt-3">
           &copy; {new Date().getFullYear()} Julius Austria. All rights reserved.

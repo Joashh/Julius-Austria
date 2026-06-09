@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/themecontext";
 import ThemeSetter from "@/components/ThemeSetter";
-import VisitorTracker from "@/components/VisitorTracker"; // <-- import client tracker
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Joash's Portfolio",
+  title: "Julius Asher P. Austria Portfolio",
   description: "Hi! I am Julius Asher P. Austria, feel free to explore my works.",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <ThemeProvider>
         <ThemeSetter />
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <VisitorTracker /> {/* This will handle visitor counting */}
+         
           {children}
         </body>
       </ThemeProvider>
