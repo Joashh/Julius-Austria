@@ -19,7 +19,7 @@ export default function Profile() {
       <div
 
         className={`transition-all duration-500 ease-in-out 
-          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-100 dark:bg-gray-900" : "  bg-gray-100  dark:bg-gray-800 rounded-md sm:flex-row sm:items-center flex flex-col gap-2  "}
+          ${isExpanded ? "fixed inset-0 z-50 flex items-center justify-center bg-gray-100 dark:bg-gray-900" : "  bg-gray-100  dark:bg-gray-800 rounded-xl sm:flex-row sm:items-center flex flex-col gap-2  "}
         `}
         data-theme={theme || "light"}>
 

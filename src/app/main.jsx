@@ -12,7 +12,7 @@ import GlassSurface from "@/components/GlassSurface";
 
 
 export default function Main() {
-    const [currentSlide, setCurrentSlide] = useState(0); // State is here now
+    const [currentSlide, setCurrentSlide] = useState(3); // State is here now
     const [showNavigation, setShowNavigation] = useState(true);
     const lastScrollY = useRef(0);
 

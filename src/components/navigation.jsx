@@ -29,7 +29,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
   };
 
 
-  const [clickstate, setclickstate] = useState(0);
+  const [clickstate, setclickstate] = useState(3);
 
 
   function toggleTheme() {
@@ -76,14 +76,21 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
         <AnimatePresence>
 
           <motion.nav
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="flex w-full  md:w-2/3 transition-all duration-500 ease-in-out   bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
             <div className="flex  items-center  h-auto w-full ">
 
               <ul className="flex gap-auto px-6 md:gap-4 xl:gap-10 justify-between w-full items-center md:justify-center  ease-in-out duration-100  ">
+
+                <li className="flex flex-col gap-1 items-center cursor-pointer">
+
+                  <ComputerDesktopIcon className={clickstate === 3 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('projects'); toggleVisibility(true); setclickstate(3); }} />
+                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Projects & Works</h1>
+                </li>
+
                 <li className="flex flex-col gap-1  items-center cursor-pointer">
                   <BuildingOffice2Icon className={clickstate === 0 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('showcase'); toggleVisibility(false); setclickstate(0); }} />
                   <h1 className="
@@ -105,11 +112,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
                   <BoltIcon className={clickstate === 2 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('skills'); toggleVisibility(false); setclickstate(2); }} />
                   <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Skills & Experience</h1>
                 </li>
-                <li className="flex flex-col gap-1 items-center cursor-pointer">
 
-                  <ComputerDesktopIcon className={clickstate === 3 ? "text-blue-900 dark:text-blue-300 h-7 w-7" : "h-7 w-7 text-gray-600 dark:text-white hover:text-blue-900 active:text-blue-900 dark:hover:text-blue-300 dark:active:text-blue-500"} onClick={() => { goToSlide('projects'); toggleVisibility(true); setclickstate(3); }} />
-                  <h1 className='hidden md:block text-sm font-semibold text-gray-400 text-center truncate'>Projects & Works</h1>
-                </li>
                 <li className="flex items-center gap-1  flex-col cursor-pointer" onClick={toggleTheme}>
 
                   <motion.div
