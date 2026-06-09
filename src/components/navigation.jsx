@@ -80,7 +80,7 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 100, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex w-full  md:w-2/3 transition-all duration-500 ease-in-out   bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
+            className="flex w-full  md:w-4/6 transition-all duration-500 ease-in-out   bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
             <div className="flex  items-center  h-auto w-full ">
 
               <ul className="flex gap-auto px-6 md:gap-4 xl:gap-10 justify-between w-full items-center md:justify-center  ease-in-out duration-100  ">
@@ -165,59 +165,67 @@ export default function Navigation({ goToSlide, currentProject, setCurrentProjec
         </AnimatePresence>
 
         <motion.nav
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: 100, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="hidden  transition-all duration-500 ease-in-out flex-1 sm:flex  gap-4 justify-center items-center bg-white shadow-md dark:bg-gray-800 p-5 max-sm:backdrop-blur-xs   rounded-xl">
+          className="hidden sm:flex flex-col  flex-1 p-5 bg-white dark:bg-gray-800 rounded-xl shadow-md"
+        >
+          
 
+          <div className="flex flex-row gap-3 flex-1 justify-center">
+            <a
+              href="https://github.com/Joashh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group gap-2 flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-700 p-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all"
+            >
+              <div className="flex items-center gap-3">
+                <FaGithub className="text-lg" />
+                <span className="font-medium">GitHub</span>
+              </div>
+              <span className="opacity-50 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
 
+            <a
+              href="/Julius_Resume.pdf"
+              download="Resume_Julius.pdf"
+              className="group gap-2 flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-700 p-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all"
+            >
+              <div className="flex items-center gap-3">
+                <ArrowDownTrayIcon className="h-5 w-5" />
+                <span className="font-medium">Resume</span>
+              </div>
+              <span className="opacity-50 group-hover:translate-y-1 transition-transform">
+                ↓
+              </span>
+            </a>
 
-          <a
-            href="https://github.com/Joashh"
-            className="cursor-pointer gap-2 text-sm flex items-center justify-center text-white bg-gray-700 rounded-md  h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
-          >
-            <FaGithub />
-            <span className=' hidden lg:block
-      text-xs xl:text-sm 
-      truncate max-w-full'>Visit GitHub</span>
+            <button
+              className="group gap-2 flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-700 p-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-all cursor-pointer"
+              onClick={() => {
+                const link = "https://juliusasheraustria.vercel.app/";
 
-          </a>
+                if (navigator.clipboard) {
+                  navigator.clipboard.writeText(link);
+                  alert("Portfolio link copied!");
+                } else {
+                  prompt("Copy this link:", link);
+                }
+              }}
+            >
+              <div className="flex items-center gap-3">
+                <AiOutlineShareAlt className="h-5 w-5" />
+                <span className="font-medium">Share </span>
+              </div>
 
-          <a href="/Julius_Resume.pdf" download="Resume_Julius.pdf">
-            <button className="
-    flex items-center gap-2 cursor-pointer font-sans font-medium
-    bg-gray-700 text-white rounded-md h-10 px-4 max-sm:px-3
-    hover:bg-gray-600 active:bg-gray-800
-    
-  ">
-              <ArrowDownTrayIcon className="h-5 w-5 text-white shrink-0" />
-
-              <span className="
-      hidden lg:block
-      text-xs xl:text-sm 
-    ">
-                Download Resume
+              <span className="opacity-50 group-hover:scale-110 transition-transform">
+                ↗
               </span>
             </button>
-          </a>
-
-
-          <button
-            className="cursor-pointer flex items-center justify-center text-white bg-gray-700 rounded-md  h-10 px-4 font-medium max-sm:text-xs hover:bg-gray-600 active:bg-gray-800"
-            title="Copy Portfolio Link"
-            onClick={() => {
-              const link = "https://juliusasheraustria.vercel.app/";
-              if (navigator.clipboard) {
-                navigator.clipboard.writeText(link);
-                alert("Portfolio link copied!");
-              } else {
-                prompt("Copy this link:", link);
-              }
-            }}
-          >
-            <AiOutlineShareAlt className="w-5 h-5" />
-          </button>
+          </div>
         </motion.nav>
       </div>
     </>
